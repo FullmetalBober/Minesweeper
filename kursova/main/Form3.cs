@@ -45,6 +45,7 @@ namespace main
         }
         private void Form3_Load(object sender, EventArgs e)
         {
+
             Settings.recordCount = 0;
             this.FormClosing += Form2_Closing;
             FormBorderStyle = FormBorderStyle.FixedSingle;
