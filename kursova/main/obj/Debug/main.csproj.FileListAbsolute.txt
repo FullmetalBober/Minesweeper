@@ -1,0 +1,24 @@
+C:\Users\manki\Desktop\kursova\main\bin\Debug\main.exe.config
+C:\Users\manki\Desktop\kursova\main\bin\Debug\main.exe
+C:\Users\manki\Desktop\kursova\main\bin\Debug\main.pdb
+C:\Users\manki\Desktop\kursova\main\obj\Debug\main.csproj.AssemblyReference.cache
+C:\Users\manki\Desktop\kursova\main\obj\Debug\main.csproj.SuggestedBindingRedirects.cache
+C:\Users\manki\Desktop\kursova\main\obj\Debug\main.Form1.resources
+C:\Users\manki\Desktop\kursova\main\obj\Debug\main.Properties.Resources.resources
+C:\Users\manki\Desktop\kursova\main\obj\Debug\main.csproj.GenerateResource.cache
+C:\Users\manki\Desktop\kursova\main\obj\Debug\main.csproj.CoreCompileInputs.cache
+C:\Users\manki\Desktop\kursova\main\obj\Debug\main.exe
+C:\Users\manki\Desktop\kursova\main\obj\Debug\main.pdb
+C:\Users\manki\Desktop\kursova\main\obj\Debug\main.Form2.resources
+C:\Users\manki\Desktop\курсова 2022\kursova\main\bin\Debug\main.exe.config
+C:\Users\manki\Desktop\курсова 2022\kursova\main\bin\Debug\main.exe
+C:\Users\manki\Desktop\курсова 2022\kursova\main\bin\Debug\main.pdb
+C:\Users\manki\Desktop\курсова 2022\kursova\main\obj\Debug\main.csproj.AssemblyReference.cache
+C:\Users\manki\Desktop\курсова 2022\kursova\main\obj\Debug\main.csproj.SuggestedBindingRedirects.cache
+C:\Users\manki\Desktop\курсова 2022\kursova\main\obj\Debug\main.Form1.resources
+C:\Users\manki\Desktop\курсова 2022\kursova\main\obj\Debug\main.Form2.resources
+C:\Users\manki\Desktop\курсова 2022\kursova\main\obj\Debug\main.Properties.Resources.resources
+C:\Users\manki\Desktop\курсова 2022\kursova\main\obj\Debug\main.csproj.GenerateResource.cache
+C:\Users\manki\Desktop\курсова 2022\kursova\main\obj\Debug\main.csproj.CoreCompileInputs.cache
+C:\Users\manki\Desktop\курсова 2022\kursova\main\obj\Debug\main.exe
+C:\Users\manki\Desktop\курсова 2022\kursova\main\obj\Debug\main.pdb
