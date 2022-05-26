@@ -51,7 +51,7 @@ namespace main
             }
             if (Settings.mapWidth < 1)
                 button1.Visible = false;
-            button1.Image = Image.FromFile(Path.Combine(new DirectoryInfo(Directory.GetCurrentDirectory()).Parent.Parent.FullName.ToString(), "resourse\\dobre.png"));
+            button1.Image = Image.FromFile("dobre.png");
             Settings.gameTime = 0;
             Settings.gameWin = 0;
             FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -77,7 +77,7 @@ namespace main
 
             Graphics gr = Graphics.FromImage(png_out);
 
-            gr.DrawImage(new Bitmap(Path.Combine(new DirectoryInfo(Directory.GetCurrentDirectory()).Parent.Parent.FullName.ToString(), "resourse\\saper.png")), new Rectangle(new Point(0, 0), new Size(Game.size, Game.size)), (xPos - 1) * 100 - 7, (yPos - 1) * 100 - 7, 116, 116, GraphicsUnit.Pixel);
+            gr.DrawImage(Image.FromFile("saper.png"), new Rectangle(new Point(0, 0), new Size(Game.size, Game.size)), (xPos - 1) * 100 - 7, (yPos - 1) * 100 - 7, 116, 116, GraphicsUnit.Pixel);
 
             return png_out;
         }
@@ -148,18 +148,8 @@ namespace main
         }
             private void sizeGame()
         {
-            //if (Settings.mapWidth > 3)
-            //{
                 this.Width = Settings.mapWidth * Game.size + Game.empty * 3 + Game.empty / 2;
-                this.Height = Settings.mapHeight * Game.size + Game.empty * 2 + 86;//90
-            //}
-            //else
-            //{
-            //    this.Width = Settings.mapWidth * size + empty * 3 + empty / 2;
-            //    this.Height = Settings.mapHeight * size + empty * 6;
-            //}
-
-
+                this.Height = Settings.mapHeight * Game.size + Game.empty * 2 + 86;
         }
 
 
@@ -438,9 +428,6 @@ namespace main
                             map[i - 1, j - 1] = 11;
                         }
 
-                        ///
-                        ////
-                        ///
 
                         if (i - 1 >= 0 && map[i - 1, j] != 0 && map[i - 1, j] != 11)
                         {
@@ -588,61 +575,61 @@ namespace main
                         case -11:
                             buttons[i, j].Enabled = false;
                             map[i, j] = 0;
-                            buttons[i, j].Image = imgFind(1, 4);//
+                            buttons[i, j].Image = imgFind(1, 4);
                             Settings.mapFlag++;
                             break;
                         case -10:
                             buttons[i, j].Enabled = false;
                             map[i, j] = 10;
-                            buttons[i, j].Image = imgFind(5, 2);//
+                            buttons[i, j].Image = imgFind(5, 2);
                             Settings.mapFlag++;
                             break;
                         case -8:
                             buttons[i, j].Enabled = false;
                             map[i, j] = 8;
-                            buttons[i, j].Image = imgFind(3, 2);//
+                            buttons[i, j].Image = imgFind(3, 2);
                             Settings.mapFlag++;
                             break;
                         case -7:
                             buttons[i, j].Enabled = false;
                             map[i, j] = 7;
-                            buttons[i, j].Image = imgFind(2, 2);//
+                            buttons[i, j].Image = imgFind(2, 2);
                             Settings.mapFlag++;
                             break;
                         case -6:
                             buttons[i, j].Enabled = false;
                             map[i, j] = 6;
-                            buttons[i, j].Image = imgFind(1, 2);//
+                            buttons[i, j].Image = imgFind(1, 2);
                             Settings.mapFlag++;
                             break;
                         case -5:
                             buttons[i, j].Enabled = false;
                             map[i, j] = 5;
-                            buttons[i, j].Image = imgFind(5, 1);//
+                            buttons[i, j].Image = imgFind(5, 1);
                             Settings.mapFlag++;
                             break;
                         case -4:
                             buttons[i, j].Enabled = false;
                             map[i, j] = 4;
-                            buttons[i, j].Image = imgFind(4, 1);//
+                            buttons[i, j].Image = imgFind(4, 1);
                             Settings.mapFlag++;
                             break;
                         case -3:
                             buttons[i, j].Enabled = false;
                             map[i, j] = 3;
-                            buttons[i, j].Image = imgFind(3, 1);//
+                            buttons[i, j].Image = imgFind(3, 1);
                             Settings.mapFlag++;
                             break;
                         case -2:
                             buttons[i, j].Enabled = false;
                             map[i, j] = 2;
-                            buttons[i, j].Image = imgFind(2, 1);//
+                            buttons[i, j].Image = imgFind(2, 1);
                             Settings.mapFlag++;
                             break;
                         case -1:
                             buttons[i, j].Enabled = false;
                             map[i, j] = 1;
-                            buttons[i, j].Image = imgFind(1, 1);//
+                            buttons[i, j].Image = imgFind(1, 1);
                             Settings.mapFlag++;
                             break;
                     }
@@ -656,7 +643,7 @@ namespace main
             switch (game)
             {
                 case 0:
-                    button1.Image = Image.FromFile(Path.Combine(new DirectoryInfo(Directory.GetCurrentDirectory()).Parent.Parent.FullName.ToString(), "resourse\\zle.png"));
+                    button1.Image = Image.FromFile("zle.png");
                     MessageBox.Show("Поразка -_-");
                     for (int i = 0; i < Settings.mapHeight; i++)
                     {
@@ -671,6 +658,7 @@ namespace main
                     }
                             break;
                     case 1:
+                    recordWrite();
                     MessageBox.Show("Перемога ^_^");
                     for (int i = 0; i < Settings.mapHeight; i++)
                     {
@@ -686,6 +674,30 @@ namespace main
                     break;
             }
         }
+
+        private void recordWrite()
+        {
+            if (Settings.gameLevel == 1)
+            {
+                StreamWriter writer = new StreamWriter("easy.txt", true);
+                writer.WriteLineAsync(Settings.gameTime.ToString());
+                writer.Close();
+            }
+            if (Settings.gameLevel == 2)
+            {
+                StreamWriter writer = new StreamWriter("medium.txt", true);
+                writer.WriteLineAsync(Settings.gameTime.ToString());
+                writer.Close();
+            }
+            if (Settings.gameLevel == 3)
+            {
+                StreamWriter writer = new StreamWriter("hard.txt", true);
+                writer.WriteLineAsync(Settings.gameTime.ToString());
+                writer.Close();
+            }
+
+        }   
+        
         private void timer1_Tick(object sender, EventArgs e)
         {
             Settings.gameTime++;

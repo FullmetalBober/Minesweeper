@@ -66,6 +66,7 @@ namespace main
         {
             if (radioButton1.Checked)
             {
+                Settings.gameLevel = 1;
                 Settings.mapHeight = 9;
                 Settings.mapWidth = 9;
                 Settings.mapMin = 10;
@@ -76,6 +77,7 @@ namespace main
 
             if (radioButton2.Checked)
             {
+                Settings.gameLevel = 2;
                 Settings.mapHeight = 14;
                 Settings.mapWidth = 14;
                 Settings.mapMin = 35;
@@ -86,6 +88,7 @@ namespace main
 
             if (radioButton3.Checked)
             {
+                Settings.gameLevel = 3;
                 Settings.mapHeight = 19;
                 Settings.mapWidth = 19;
                 Settings.mapMin = 75;
@@ -96,6 +99,7 @@ namespace main
 
             if (radioButton4.Checked)
             {
+                Settings.gameLevel = 0;
                 int mh, mw, mm, min = 0;
                 if (int.TryParse(textBox1.Text, out mh) && mh > min && mh < 20)
                 {

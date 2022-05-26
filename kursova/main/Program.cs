@@ -14,6 +14,7 @@ namespace main
         public static int mapFlag { get; set; }
         public static int gameWin { get; set; }
         public static int gameTime { get; set; }
+        public static int gameLevel { get; set; }
     }
 
     internal static class Program
