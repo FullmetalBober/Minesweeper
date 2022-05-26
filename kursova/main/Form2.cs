@@ -680,18 +680,21 @@ namespace main
             if (Settings.gameLevel == 1)
             {
                 StreamWriter writer = new StreamWriter("easy.txt", true);
+                writer.WriteLineAsync(Settings.gameName.ToString());
                 writer.WriteLineAsync(Settings.gameTime.ToString());
                 writer.Close();
             }
             if (Settings.gameLevel == 2)
             {
                 StreamWriter writer = new StreamWriter("medium.txt", true);
+                writer.WriteLineAsync(Settings.gameName.ToString());
                 writer.WriteLineAsync(Settings.gameTime.ToString());
                 writer.Close();
             }
             if (Settings.gameLevel == 3)
             {
                 StreamWriter writer = new StreamWriter("hard.txt", true);
+                writer.WriteLineAsync(Settings.gameName.ToString());
                 writer.WriteLineAsync(Settings.gameTime.ToString());
                 writer.Close();
             }

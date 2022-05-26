@@ -41,29 +41,12 @@ namespace main
             MinimizeBox = false;
         }
 
-        //private void buttonDesign()
-        //{
-        //    GraphicsPath gp = new GraphicsPath();
-        //    Graphics g = CreateGraphics();
-        //    // Создадим новый прямоугольник с размерами кнопки 
-        //    Rectangle smallRectangle = button1.ClientRectangle;
-        //    // уменьшим размеры прямоугольника 
-        //    smallRectangle.Inflate(5, 5);
-        //    // создадим эллипс, используя полученные размеры 
-        //    gp.AddEllipse(smallRectangle);
-        //    button1.Region = new Region(gp);
-        //    // рисуем окантовоку для круглой кнопки 
-        //    g.DrawEllipse(new Pen(Color.Gray, 2),
-        //    button1.Left + 1,
-        //    button1.Top + 1,
-        //    button1.Width - 3,
-        //    button1.Height - 3);
-        //    // освобождаем ресурсы 
-        //    g.Dispose();
-        //}
-
         private void button1_Click(object sender, EventArgs e)
         {
+            Settings.gameName = textBox4.Text;
+            if (Settings.gameName.Length == 0)
+                Settings.gameName = "-";
+
             if (radioButton1.Checked)
             {
                 Settings.gameLevel = 1;
@@ -146,8 +129,6 @@ namespace main
                     mm = 0;
                 }
 
-                ////
-
                 if (mh > 0 && mw > 0 && mm > 0)
                 {
                     this.Hide();
@@ -195,6 +176,13 @@ namespace main
         private void label5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form3 record = new Form3();
+            record.Show();
         }
     }
 }

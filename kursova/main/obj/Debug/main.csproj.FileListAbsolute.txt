@@ -22,3 +22,4 @@ C:\Users\manki\Desktop\курсова 2022\kursova\main\obj\Debug\main.csproj.Ge
 C:\Users\manki\Desktop\курсова 2022\kursova\main\obj\Debug\main.csproj.CoreCompileInputs.cache
 C:\Users\manki\Desktop\курсова 2022\kursova\main\obj\Debug\main.exe
 C:\Users\manki\Desktop\курсова 2022\kursova\main\obj\Debug\main.pdb
+C:\Users\manki\Desktop\курсова 2022\kursova\main\obj\Debug\main.Form3.resources

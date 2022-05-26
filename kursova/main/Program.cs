@@ -15,6 +15,9 @@ namespace main
         public static int gameWin { get; set; }
         public static int gameTime { get; set; }
         public static int gameLevel { get; set; }
+        public static string gameName { get; set; }
+        public static int recordList { get; set; }
+        public static int recordCount { get; set; }
     }
 
     internal static class Program
