@@ -78,7 +78,7 @@ namespace main
 
             recordHard.Sort(delegate (RecordHard a, RecordHard b)
             { return a.hardTime.CompareTo(b.hardTime); });
-            for (int i = 10 * Settings.recordList; i < 10 * (Settings.recordList + 1) || i < recordHard.Count; i++)
+            for (int i = 14 * Settings.recordList; i < 14 * (Settings.recordList + 1) || i < recordHard.Count; i++)
             {
                 richTextBox3.Text += "\n" + (i + 1) + "." + recordHard[i].hardName;
                 textBox6.Text += "\t" + recordHard[i].hardTime;
@@ -108,7 +108,7 @@ namespace main
 
             recordMedium.Sort(delegate (RecordMedium a, RecordMedium b)
             { return a.mediumTime.CompareTo(b.mediumTime); });
-            for (int i = 10 * Settings.recordList; i < 10 * (Settings.recordList + 1) || i < recordMedium.Count; i++)
+            for (int i = 14 * Settings.recordList; i < 14 * (Settings.recordList + 1) || i < recordMedium.Count; i++)
             {
                 richTextBox2.Text += "\n" + (i + 1) + "." + recordMedium[i].mediumName;
                 textBox5.Text += "\t" + recordMedium[i].mediumTime;
@@ -142,7 +142,7 @@ namespace main
              { return a.easyTime.CompareTo(b.easyTime); });
             //for (int i = 0; i < 15; i++)
             //    richTextBox1.Text += "\n3";
-            for (int i = 10 * Settings.recordList; i < 10 * (Settings.recordList + 1) || i < recordEasy.Count; i++)
+            for (int i = 14 * Settings.recordList; i < 14 * (Settings.recordList + 1) && i < recordEasy.Count; i++)
             {
                 richTextBox1.Text += "\n"+ (i + 1) + "." + recordEasy[i].easyName;
                 textBox4.Text += "\t" + recordEasy[i].easyTime;
@@ -179,7 +179,7 @@ namespace main
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (10 * (Settings.recordList + 1) <= Settings.recordCount)
+            if (14 * (Settings.recordList + 1) < Settings.recordCount + 1)
             {
                 Settings.recordList++;
                 read_Easy();
