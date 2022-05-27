@@ -28,11 +28,6 @@ namespace main
             public string hardName { get; set; }
             public int hardTime { get; set; }
         }
-
-
-
-
-
         public Form3()
         {
             InitializeComponent();
@@ -124,10 +119,6 @@ namespace main
 
             }
         }
-
-
-
-
         private async Task read_Easy()
         {
             richTextBox1.Text = null;
@@ -146,16 +137,14 @@ namespace main
             readerEasy.Close();
 
             if (Properties.Settings.Default.Language == "en-US")
-                richTextBox1.Text += "\t\tŁatwo";
-            else if (Properties.Settings.Default.Language == "pl-PL")
                 richTextBox1.Text += "\t\tEasy";
+            else if (Properties.Settings.Default.Language == "pl-PL")
+                richTextBox1.Text += "\t\tŁatwo";
             else
                 richTextBox1.Text += "\t\tЛегкий";
 
             recordEasy.Sort(delegate (RecordEasy a, RecordEasy b)
              { return a.easyTime.CompareTo(b.easyTime); });
-            //for (int i = 0; i < 15; i++)
-            //    richTextBox1.Text += "\n3";
             for (int i = 14 * Settings.recordList; i < 14 * (Settings.recordList + 1) && i < recordEasy.Count; i++)
             {
                 richTextBox1.Text += "\n"+ (i + 1) + "." + recordEasy[i].easyName;
@@ -164,11 +153,6 @@ namespace main
             }
 
         }
-
-      
-
- 
-
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -200,6 +184,11 @@ namespace main
                 read_Medium();
                 read_Hard();
             }
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -34,3 +34,7 @@ C:\Users\manki\Desktop\курсова 2022\kursova\main\obj\Debug\main.Form1.en-
 C:\Users\manki\Desktop\курсова 2022\kursova\main\obj\Debug\en-SL\main.resources.dll
 C:\Users\manki\Desktop\курсова 2022\kursova\main\obj\Debug\main.Form3.en-US.resources
 C:\Users\manki\Desktop\курсова 2022\kursova\main\obj\Debug\main.Form3.pl-PL.resources
+C:\Users\manki\Desktop\курсова 2022\kursova\main\bin\Debug\main.exe.manifest
+C:\Users\manki\Desktop\курсова 2022\kursova\main\bin\Debug\main.application
+C:\Users\manki\Desktop\курсова 2022\kursova\main\obj\Debug\main.exe.manifest
+C:\Users\manki\Desktop\курсова 2022\kursova\main\obj\Debug\main.application

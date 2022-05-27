@@ -42,56 +42,57 @@
             // 
             // textBox4
             // 
-            resources.ApplyResources(this.textBox4, "textBox4");
             this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(83)))), ((int)(((byte)(249)))));
+            resources.ApplyResources(this.textBox4, "textBox4");
             this.textBox4.ForeColor = System.Drawing.Color.White;
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
             // 
             // textBox5
             // 
-            resources.ApplyResources(this.textBox5, "textBox5");
             this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(83)))), ((int)(((byte)(249)))));
+            resources.ApplyResources(this.textBox5, "textBox5");
             this.textBox5.ForeColor = System.Drawing.Color.White;
             this.textBox5.Name = "textBox5";
             this.textBox5.ReadOnly = true;
             // 
             // textBox6
             // 
-            resources.ApplyResources(this.textBox6, "textBox6");
             this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(83)))), ((int)(((byte)(249)))));
+            resources.ApplyResources(this.textBox6, "textBox6");
             this.textBox6.ForeColor = System.Drawing.Color.White;
             this.textBox6.Name = "textBox6";
             this.textBox6.ReadOnly = true;
             // 
             // richTextBox1
             // 
-            resources.ApplyResources(this.richTextBox1, "richTextBox1");
             this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(42)))), ((int)(((byte)(185)))));
+            resources.ApplyResources(this.richTextBox1, "richTextBox1");
             this.richTextBox1.ForeColor = System.Drawing.Color.White;
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
+            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // richTextBox2
             // 
-            resources.ApplyResources(this.richTextBox2, "richTextBox2");
             this.richTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(42)))), ((int)(((byte)(185)))));
+            resources.ApplyResources(this.richTextBox2, "richTextBox2");
             this.richTextBox2.ForeColor = System.Drawing.Color.White;
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.ReadOnly = true;
             // 
             // richTextBox3
             // 
-            resources.ApplyResources(this.richTextBox3, "richTextBox3");
             this.richTextBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(42)))), ((int)(((byte)(185)))));
+            resources.ApplyResources(this.richTextBox3, "richTextBox3");
             this.richTextBox3.ForeColor = System.Drawing.Color.White;
             this.richTextBox3.Name = "richTextBox3";
             this.richTextBox3.ReadOnly = true;
             // 
             // button1
             // 
-            resources.ApplyResources(this.button1, "button1");
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(226)))));
+            resources.ApplyResources(this.button1, "button1");
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Name = "button1";
             this.button1.UseVisualStyleBackColor = false;
@@ -99,8 +100,8 @@
             // 
             // button2
             // 
-            resources.ApplyResources(this.button2, "button2");
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(226)))));
+            resources.ApplyResources(this.button2, "button2");
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Name = "button2";
             this.button2.UseVisualStyleBackColor = false;
@@ -108,8 +109,8 @@
             // 
             // button3
             // 
-            resources.ApplyResources(this.button3, "button3");
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(49)))), ((int)(((byte)(226)))));
+            resources.ApplyResources(this.button3, "button3");
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Name = "button3";
             this.button3.UseVisualStyleBackColor = false;
