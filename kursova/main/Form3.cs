@@ -45,7 +45,6 @@ namespace main
         }
         private void Form3_Load(object sender, EventArgs e)
         {
-
             Settings.recordCount = 0;
             this.FormClosing += Form2_Closing;
             FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -74,7 +73,12 @@ namespace main
             }
             readerHard.Close();
 
-            richTextBox3.Text += "\t\tВажкий";
+            if (Properties.Settings.Default.Language == "en-US")
+                richTextBox3.Text += "\t\tHard";
+            else if (Properties.Settings.Default.Language == "pl-PL")
+                richTextBox3.Text += "\t\tTrudny";
+            else
+                richTextBox3.Text += "\t\tВажкий";
 
             recordHard.Sort(delegate (RecordHard a, RecordHard b)
             { return a.hardTime.CompareTo(b.hardTime); });
@@ -104,7 +108,12 @@ namespace main
             }
             readerMedium.Close();
 
-            richTextBox2.Text += "\t\tСередній";
+            if (Properties.Settings.Default.Language == "en-US")
+                richTextBox2.Text += "\t\tMedium";
+            else if (Properties.Settings.Default.Language == "pl-PL")
+                richTextBox2.Text += "\t\tŚrednio";
+            else
+                richTextBox2.Text += "\t\tСередній";
 
             recordMedium.Sort(delegate (RecordMedium a, RecordMedium b)
             { return a.mediumTime.CompareTo(b.mediumTime); });
@@ -136,7 +145,12 @@ namespace main
             }
             readerEasy.Close();
 
-            richTextBox1.Text += "\t\tЛегкий";
+            if (Properties.Settings.Default.Language == "en-US")
+                richTextBox1.Text += "\t\tŁatwo";
+            else if (Properties.Settings.Default.Language == "pl-PL")
+                richTextBox1.Text += "\t\tEasy";
+            else
+                richTextBox1.Text += "\t\tЛегкий";
 
             recordEasy.Sort(delegate (RecordEasy a, RecordEasy b)
              { return a.easyTime.CompareTo(b.easyTime); });

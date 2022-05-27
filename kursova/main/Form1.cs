@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Drawing.Drawing2D;
+using System.Globalization;
 
 namespace main
 {
@@ -15,6 +15,8 @@ namespace main
     {
         public Form1()
         {
+            System.Threading.Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo(Properties.Settings.Default.Language);
+            System.Threading.Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo(Properties.Settings.Default.Language);
             InitializeComponent();
 
         }
@@ -43,6 +45,8 @@ namespace main
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+
             Settings.gameName = textBox4.Text;
             if (Settings.gameName.Length == 0)
                 Settings.gameName = "-";
@@ -91,7 +95,12 @@ namespace main
                 }
                 else
                 {
-                    MessageBox.Show("Помилка введення висоти!");
+                    if (Properties.Settings.Default.Language == "en-US")
+                        MessageBox.Show("Error entering height!");
+                   else if (Properties.Settings.Default.Language == "pl-PL")
+                        MessageBox.Show("Błąd podczas wprowadzania wysokości!");
+                   else
+                        MessageBox.Show("Помилка введення висоти!");
                     textBox1.Text = null;
                     mh = 0;
                 }
@@ -105,7 +114,12 @@ namespace main
                 }
                 else
                 {
-                    MessageBox.Show("Помилка введення ширини!");
+                    if (Properties.Settings.Default.Language == "en-US")
+                        MessageBox.Show("Width input error!");
+                    else if (Properties.Settings.Default.Language == "pl-PL")
+                        MessageBox.Show("Błąd podczas wprowadzania wysokości!");
+                    else
+                        MessageBox.Show("Błąd wprowadzania szerokości!");
                     textBox2.Text = null;
                     mw = 0;
                 }
@@ -124,7 +138,12 @@ namespace main
                 }
                 else
                 {
-                    MessageBox.Show("Помилка введення кількості мін!");
+                    if (Properties.Settings.Default.Language == "en-US")
+                        MessageBox.Show("Error entering the number of mines!");
+                    else if (Properties.Settings.Default.Language == "pl-PL")
+                        MessageBox.Show("Błąd podczas wprowadzania liczby min!");
+                    else
+                        MessageBox.Show("Помилка введення кількості мін!");
                     textBox3.Text = null;
                     mm = 0;
                 }
@@ -183,6 +202,38 @@ namespace main
             this.Hide();
             Form3 record = new Form3();
             record.Show();
+        }
+        bool lang = false;
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lang = true;
+            if (languages.SelectedIndex == 0 && lang)
+            {
+                System.Threading.Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("uk-UA");
+                System.Threading.Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("uk-UA");
+                Properties.Settings.Default.Language = "uk-UA";
+                Properties.Settings.Default.Save();
+                Application.Restart();
+                languages.Text = "Українська";
+            }
+            else if (languages.SelectedIndex == 1)
+            {
+                System.Threading.Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("en-US");
+                System.Threading.Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("en-US");
+                Properties.Settings.Default.Language = "en-US";
+                Properties.Settings.Default.Save();
+                Application.Restart();
+                languages.Text = "English";
+            }
+            else if (languages.SelectedIndex == 2)
+            {
+                System.Threading.Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("pl-PL");
+                System.Threading.Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("pl-PL");
+                Properties.Settings.Default.Language = "pl-PL";
+                Properties.Settings.Default.Save();
+                Application.Restart();
+                languages.Text = "Polski";
+            }
         }
     }
 }

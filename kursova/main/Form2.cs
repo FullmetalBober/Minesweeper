@@ -51,7 +51,12 @@ namespace main
             }
             if (Settings.mapWidth < 1)
                 button1.Visible = false;
-            button1.Image = Image.FromFile("dobre.png");
+            if (Settings.mapWidth < 8)
+            {
+                pictureBox1.Visible = false;
+                pictureBox2.Visible = false;
+            }
+                button1.Image = Image.FromFile("dobre.png");
             Settings.gameTime = 0;
             Settings.gameWin = 0;
             FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -644,7 +649,12 @@ namespace main
             {
                 case 0:
                     button1.Image = Image.FromFile("zle.png");
-                    MessageBox.Show("Поразка -_-");
+                    if (Properties.Settings.Default.Language == "en-US")
+                        MessageBox.Show("Defeat -_-");
+                    else if (Properties.Settings.Default.Language == "pl-PL")
+                        MessageBox.Show("Pokonać -_-");
+                    else
+                        MessageBox.Show("Поразка -_-");
                     for (int i = 0; i < Settings.mapHeight; i++)
                     {
                         for (int j = 0; j < Settings.mapWidth; j++)
@@ -659,7 +669,12 @@ namespace main
                             break;
                     case 1:
                     recordWrite();
-                    MessageBox.Show("Перемога ^_^");
+                    if (Properties.Settings.Default.Language == "en-US")
+                        MessageBox.Show("Victory ^_^");
+                    else if (Properties.Settings.Default.Language == "pl-PL")
+                        MessageBox.Show("Zwycięstwo ^_^");
+                    else
+                        MessageBox.Show("Перемога ^_^");
                     for (int i = 0; i < Settings.mapHeight; i++)
                     {
                         for (int j = 0; j < Settings.mapWidth; j++)
