@@ -41,6 +41,7 @@ namespace main
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             MinimizeBox = false;
+            textBox4.MaxLength = 15;
         }
 
         private void button1_Click(object sender, EventArgs e)
