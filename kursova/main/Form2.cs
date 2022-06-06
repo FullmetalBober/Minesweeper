@@ -17,6 +17,7 @@ namespace main
         static class Game
         {
             public static bool first { get; set; }
+            public static bool stop { get; set; }
 
             public static int empty { get; set; }
 
@@ -40,6 +41,7 @@ namespace main
 
         private void Form2_Load(object sender, EventArgs e) 
         {
+            Game.stop = false;
             Game.empty = 10;
             Game.size = 49;
 
@@ -644,49 +646,53 @@ namespace main
         }
         private void endGame(int game)
         {
-            timer1.Enabled = false;
-            switch (game)
+            if (Game.stop == false)
             {
-                case 0:
-                    button1.Image = Image.FromFile("zle.png");
-                    if (Properties.Settings.Default.Language == "en-US")
-                        MessageBox.Show("Defeat -_-");
-                    else if (Properties.Settings.Default.Language == "pl-PL")
-                        MessageBox.Show("Pokonać -_-");
-                    else
-                        MessageBox.Show("Поразка -_-");
-                    for (int i = 0; i < Settings.mapHeight; i++)
-                    {
-                        for (int j = 0; j < Settings.mapWidth; j++)
+                timer1.Enabled = false;
+                switch (game)
+                {
+                    case 0:
+                        button1.Image = Image.FromFile("zle.png");
+                        if (Properties.Settings.Default.Language == "en-US")
+                            MessageBox.Show("Defeat -_-");
+                        else if (Properties.Settings.Default.Language == "pl-PL")
+                            MessageBox.Show("Pokonać -_-");
+                        else
+                            MessageBox.Show("Поразка -_-");
+                        for (int i = 0; i < Settings.mapHeight; i++)
                         {
-                            buttons[i, j].Enabled = false;
-                            if (map[i,j] == 10 || map[i, j] == -10)
-                            {
-                                buttons[i, j].Image = imgFind(4, 2);
-                            }
-                        }
-                    }
-                            break;
-                    case 1:
-                    recordWrite();
-                    if (Properties.Settings.Default.Language == "en-US")
-                        MessageBox.Show("Victory ^_^");
-                    else if (Properties.Settings.Default.Language == "pl-PL")
-                        MessageBox.Show("Zwycięstwo ^_^");
-                    else
-                        MessageBox.Show("Перемога ^_^");
-                    for (int i = 0; i < Settings.mapHeight; i++)
-                    {
-                        for (int j = 0; j < Settings.mapWidth; j++)
-                        {
-                            if (map[i, j] == 10 || map[i, j] == -10)
+                            for (int j = 0; j < Settings.mapWidth; j++)
                             {
                                 buttons[i, j].Enabled = false;
-                                buttons[i, j].Image = imgFind(4, 3);
+                                if (map[i, j] == 10 || map[i, j] == -10)
+                                {
+                                    buttons[i, j].Image = imgFind(4, 2);
+                                }
                             }
                         }
-                    }
-                    break;
+                        break;
+                    case 1:
+                        recordWrite();
+                        if (Properties.Settings.Default.Language == "en-US")
+                            MessageBox.Show("Victory ^_^");
+                        else if (Properties.Settings.Default.Language == "pl-PL")
+                            MessageBox.Show("Zwycięstwo ^_^");
+                        else
+                            MessageBox.Show("Перемога ^_^");
+                        for (int i = 0; i < Settings.mapHeight; i++)
+                        {
+                            for (int j = 0; j < Settings.mapWidth; j++)
+                            {
+                                if (map[i, j] == 10 || map[i, j] == -10)
+                                {
+                                    buttons[i, j].Enabled = false;
+                                    buttons[i, j].Image = imgFind(4, 3);
+                                }
+                            }
+                        }
+                        break;
+                }
+                Game.stop = true;
             }
         }
 
