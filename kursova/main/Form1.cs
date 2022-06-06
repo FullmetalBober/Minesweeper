@@ -77,8 +77,8 @@ namespace main
             if (radioButton3.Checked)
             {
                 Settings.gameLevel = 3;
-                Settings.mapHeight = 19;
-                Settings.mapWidth = 19;
+                Settings.mapHeight = 15;
+                Settings.mapWidth = 23;
                 Settings.mapMin = 75;
                 this.Hide();
                 Form2 game = new Form2();
