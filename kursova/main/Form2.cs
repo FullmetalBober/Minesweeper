@@ -736,5 +736,10 @@ namespace main
             Form2 game = new Form2();
             game.Show();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

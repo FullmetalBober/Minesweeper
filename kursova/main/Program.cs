@@ -18,7 +18,8 @@ namespace main
         public static string gameName { get; set; }
         public static int recordList { get; set; }
         public static int recordCount { get; set; }
-    }
+        public static int easterEgg { get; set; }
+}
 
     internal static class Program
     {
