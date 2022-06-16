@@ -38,84 +38,12 @@ namespace main
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.KeyDown += new KeyEventHandler(Form_KeyDown);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             MinimizeBox = false;
             textBox4.MaxLength = 15;
         }
 
-        void Form_KeyDown(object sender, KeyEventArgs e)
-        {
-
-            if (e.KeyCode == Keys.Up && Settings.easterEgg == 1)
-            {
-                Settings.easterEgg = 2;
-                e.SuppressKeyPress = true;
-            }
-
-
-            else if (e.KeyCode == Keys.Up)
-            {
-                Settings.easterEgg = 1;
-                e.SuppressKeyPress = true;
-            }
-
-
-            else if (e.KeyCode == Keys.Down && Settings.easterEgg == 2)
-            {
-                Settings.easterEgg = 3;
-                e.SuppressKeyPress = true;
-            }
-
-            else if (e.KeyCode == Keys.Down && Settings.easterEgg == 3)
-            {
-                Settings.easterEgg = 4;
-                e.SuppressKeyPress = true;
-            }
-
-            else if (e.KeyCode == Keys.Left && Settings.easterEgg == 4)
-            {
-                Settings.easterEgg = 5;
-                e.SuppressKeyPress = true;
-            }
-
-            else if (e.KeyCode == Keys.Right && Settings.easterEgg == 5)
-            {
-                Settings.easterEgg = 6;
-                e.SuppressKeyPress = true;
-            }
-
-            else if (e.KeyCode == Keys.Left && Settings.easterEgg == 6)
-            {
-                Settings.easterEgg = 7;
-                e.SuppressKeyPress = true;
-            }
-
-            else if (e.KeyCode == Keys.Right && Settings.easterEgg == 7)
-            {
-                Settings.easterEgg = 8;
-                e.SuppressKeyPress = true;
-            }
-
-            else if (e.KeyCode == Keys.B && Settings.easterEgg == 8)
-            {
-                Settings.easterEgg = 9;
-                e.SuppressKeyPress = true;
-            }
-
-            else if (e.KeyCode == Keys.A && Settings.easterEgg == 9)
-            {
-                Settings.easterEgg = 10;
-                MessageBox.Show("TEST");
-                e.SuppressKeyPress = true;
-            }
-            else
-            {
-                Settings.easterEgg = 0;
-                e.SuppressKeyPress = true;
-            }
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
