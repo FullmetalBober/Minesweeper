@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Globalization;
 using WMPLib;
-
+using System.Threading;
 
 namespace main
 {
@@ -21,7 +21,6 @@ namespace main
             System.Threading.Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo(Properties.Settings.Default.Language);
             System.Threading.Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo(Properties.Settings.Default.Language);
             InitializeComponent();
-
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -98,16 +97,16 @@ namespace main
                 int mh, mw, mm, min = 0;
                 if (int.TryParse(textBox1.Text, out mh) && mh > min && mh < 20)
                 {
-                    mh =  int.Parse(textBox1.Text);
+                    mh = int.Parse(textBox1.Text);
                     Settings.mapHeight = mh;
                 }
                 else
                 {
                     if (Properties.Settings.Default.Language == "en-US")
                         MessageBox.Show("Error entering height!");
-                   else if (Properties.Settings.Default.Language == "pl-PL")
+                    else if (Properties.Settings.Default.Language == "pl-PL")
                         MessageBox.Show("Błąd podczas wprowadzania wysokości!");
-                   else
+                    else
                         MessageBox.Show("Помилка введення висоти!");
                     textBox1.Text = null;
                     mh = 0;
@@ -131,7 +130,7 @@ namespace main
                     textBox2.Text = null;
                     mw = 0;
                 }
-                
+
                 ////
 
                 if (int.TryParse(textBox3.Text, out mm) && mm > 0)
@@ -252,6 +251,25 @@ namespace main
 
         private void radioButton5_CheckedChanged(object sender, EventArgs e)
         {
+            int k;
+            if (int.TryParse(textBox5.Text, out k))
+            {
+                if (k < 1)
+                {
+                    textBox5.Text = "1";
+                    music.volum = 1;
+                }
+                else if (k > 100)
+                {
+                    textBox5.Text = "100";
+                    music.volum = 100;
+                }
+                else music.volum = k;
+            }
+            else
+            {
+                textBox5.Text = null;
+            }
             music.sound = 1;
             music.play_music_1();
         }
@@ -270,7 +288,6 @@ namespace main
 
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
-            
         }
     }
 }

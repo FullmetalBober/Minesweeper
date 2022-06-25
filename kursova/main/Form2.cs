@@ -39,7 +39,7 @@ namespace main
             main.Show();
         }
 
-        private void Form2_Load(object sender, EventArgs e) 
+        private void Form2_Load(object sender, EventArgs e)
         {
             this.KeyDown += new KeyEventHandler(Form_KeyDown);
             Game.stop = false;
@@ -59,7 +59,7 @@ namespace main
                 pictureBox1.Visible = false;
                 pictureBox2.Visible = false;
             }
-                button1.Image = Image.FromFile("dobre.png");
+            button1.Image = Image.FromFile("dobre.png");
             Settings.gameTime = 0;
             Settings.gameWin = 0;
             FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -187,7 +187,7 @@ namespace main
                     map[i, j] = 10;
                     k++;
                 }
-                if(Settings.mapHeight + Settings.mapWidth == 2)
+                if (Settings.mapHeight + Settings.mapWidth == 2)
                 {
                     map[0, 0] = 10;
                     k++;
@@ -205,7 +205,7 @@ namespace main
                 {
                     if (map[i, j] == 10)
                     {
-                        if(i + 1 < Settings.mapHeight && map[i + 1, j] != 10)
+                        if (i + 1 < Settings.mapHeight && map[i + 1, j] != 10)
                             map[i + 1, j]++;//1
                         if (i - 1 >= 0 && map[i - 1, j] != 10)
                             map[i - 1, j]++;//2
@@ -226,10 +226,10 @@ namespace main
             }
             Settings.gameTime = 0;
         }
-            private void sizeGame()
+        private void sizeGame()
         {
-                this.Width = Settings.mapWidth * Game.size + Game.empty * 3 + Game.empty / 2;
-                this.Height = Settings.mapHeight * Game.size + Game.empty * 2 + 86;
+            this.Width = Settings.mapWidth * Game.size + Game.empty * 3 + Game.empty / 2;
+            this.Height = Settings.mapHeight * Game.size + Game.empty * 2 + 86;
         }
 
 
@@ -238,7 +238,7 @@ namespace main
         {
             for (int i = 0; i < Settings.mapHeight; i++)
             {
-                for(int j = 0; j < Settings.mapWidth; j++)
+                for (int j = 0; j < Settings.mapWidth; j++)
                 {
                     Button button = new Button();
                     button.Location = new Point(Game.size * j + Game.empty, Game.size * i + Game.empty);
@@ -340,7 +340,7 @@ namespace main
                 }
             }
 
-            if (map[i, j] < 0 && map[i, j] >= -11 && k==0)
+            if (map[i, j] < 0 && map[i, j] >= -11 && k == 0)
             {
                 switch (map[i, j])
                 {
@@ -412,7 +412,7 @@ namespace main
 
             map[i, j] = 11;
 
-            while(coordXY.Count > 0)
+            while (coordXY.Count > 0)
             {
                 t++;
                 if (t % 2 != 0)
@@ -427,7 +427,8 @@ namespace main
                     {
                         visibility(i, j);
 
-                        if (i - 1 >= 0 && (map[i - 1, j] == 0 || map[i - 1, j] == -11)) {
+                        if (i - 1 >= 0 && (map[i - 1, j] == 0 || map[i - 1, j] == -11))
+                        {
                             if (map[i - 1, j] == -11)
                             {
                                 Settings.mapFlag++;
@@ -558,17 +559,18 @@ namespace main
             if (map[i, j] >= 0)
             {
                 if (Game.first)
-            {
-                mapGenerate(i, j);
+                {
+                    mapGenerate(i, j);
                     Game.first = false;
-            }
+                }
                 if (map[i, j] != 0)
                     visibility(i, j);
                 else
                     stepStart(i, j);
             }
         }
-        private void visibility(int i, int j) {
+        private void visibility(int i, int j)
+        {
             if (map[i, j] >= 0)
             {
                 if (map[i, j] == 0 || map[i, j] == 11)
@@ -715,7 +717,7 @@ namespace main
                     }
                     textBox2.Text = Settings.mapFlag.ToString();
                 }
-                }
+            }
         }
         private void endGame(int game)
         {
@@ -793,8 +795,8 @@ namespace main
                 writer.Close();
             }
 
-        }   
-        
+        }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             Settings.gameTime++;

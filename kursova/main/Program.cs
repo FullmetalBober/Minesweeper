@@ -10,27 +10,42 @@ namespace main
     {
         Random random = new Random();
         public int sound { get; set; }
+        public int volum { get; set; }
         public static WMPLib.WindowsMediaPlayer WMP = new WMPLib.WindowsMediaPlayer();
         Timer tmr = new Timer();
         public void play_music_1()
         {
-            tmr.Interval = 10;
-            tmr.Stop();
-            WMP.URL = @"1.mp3"; // файл музыкальный
-            WMP.settings.volume = 100; // меняя значение можно регулировать громкость
-            WMP.controls.play();
-            tmr.Tick += new EventHandler(tmr_Tick);
-            WMP.PlayStateChange += new WMPLib._WMPOCXEvents_PlayStateChangeEventHandler(wplayer_PlayStateChange);
+            Task.Run(() =>
+            {
+                try
+                {
+                    tmr.Interval = 10;
+                    tmr.Stop();
+                    WMP.URL = @"1.mp3";
+                    WMP.settings.volume = volum;
+                    WMP.controls.play();
+                    tmr.Tick += new EventHandler(tmr_Tick);
+                    WMP.PlayStateChange += new WMPLib._WMPOCXEvents_PlayStateChangeEventHandler(wplayer_PlayStateChange);
+                }
+                catch (Exception ex) { }
+            });
         }
         public void play_music_2()
         {
-            tmr.Interval = 10;
-            tmr.Stop();
-            WMP.URL = @"2.mp3"; // файл музыкальный
-            WMP.settings.volume = 100; // меняя значение можно регулировать громкость
-            WMP.controls.play();
-            tmr.Tick += new EventHandler(tmr_Tick);
-            WMP.PlayStateChange += new WMPLib._WMPOCXEvents_PlayStateChangeEventHandler(wplayer_PlayStateChange);
+            Task.Run(() =>
+            {
+                try
+                {
+                    tmr.Interval = 10;
+                    tmr.Stop();
+                    WMP.URL = @"2.mp3";
+                    WMP.settings.volume = volum;
+                    WMP.controls.play();
+                    tmr.Tick += new EventHandler(tmr_Tick);
+                    WMP.PlayStateChange += new WMPLib._WMPOCXEvents_PlayStateChangeEventHandler(wplayer_PlayStateChange);
+                }
+                catch (Exception ex) { }
+            });
         }
 
         void tmr_Tick(object sender, EventArgs e)
@@ -43,7 +58,7 @@ namespace main
             if (sound == 3)
                 Random();
         }
-        void wplayer_PlayStateChange(int NewState)
+        public void wplayer_PlayStateChange(int NewState)
         {
             if (NewState == (int)WMPLib.WMPPlayState.wmppsMediaEnded)
             {
@@ -54,12 +69,13 @@ namespace main
         {
             if (random.Next(1, 3) == 1)
                 play_music_1();
-            else
+            if (random.Next(1, 3) == 2)
                 play_music_2();
         }
         public void stop()
         {
             WMP.controls.stop();
+            WMP.close();
         }
     }
     static class Settings

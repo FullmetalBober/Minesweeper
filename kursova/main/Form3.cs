@@ -147,7 +147,7 @@ namespace main
              { return a.easyTime.CompareTo(b.easyTime); });
             for (int i = 14 * Settings.recordList; i < 14 * (Settings.recordList + 1) && i < recordEasy.Count; i++)
             {
-                richTextBox1.Text += "\n"+ (i + 1) + "." + recordEasy[i].easyName;
+                richTextBox1.Text += "\n" + (i + 1) + "." + recordEasy[i].easyName;
                 textBox4.Text += "\t" + recordEasy[i].easyTime;
 
             }
@@ -161,7 +161,7 @@ namespace main
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(Settings.recordList >= 1)
+            if (Settings.recordList >= 1)
             {
                 Settings.recordList--;
                 read_Easy();
