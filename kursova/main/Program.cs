@@ -91,6 +91,7 @@ namespace main
         public static int recordList { get; set; }
         public static int recordCount { get; set; }
         public static int easterEgg { get; set; }
+        public static bool konami { get; set; }
     }
 
     internal static class Program

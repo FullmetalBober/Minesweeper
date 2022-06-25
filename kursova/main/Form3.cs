@@ -36,10 +36,22 @@ namespace main
         private void Form2_Closing(Object sender, FormClosingEventArgs e)
         {
             Form main = Application.OpenForms[0];
+            if (Settings.konami == true)
+                main.BackgroundImage = Image.FromFile("space.jpg");
             main.Show();
         }
         private void Form3_Load(object sender, EventArgs e)
         {
+            if (Settings.konami == true)
+            {
+                BackgroundImage = Image.FromFile("space.jpg");
+                richTextBox1.BackColor = Color.Black;
+                richTextBox2.BackColor = Color.Black;
+                richTextBox3.BackColor = Color.Black;
+                textBox4.BackColor = Color.Black;
+                textBox5.BackColor = Color.Black;
+                textBox6.BackColor = Color.Black;
+            }
             Settings.recordCount = 0;
             this.FormClosing += Form2_Closing;
             FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -149,9 +161,7 @@ namespace main
             {
                 richTextBox1.Text += "\n" + (i + 1) + "." + recordEasy[i].easyName;
                 textBox4.Text += "\t" + recordEasy[i].easyTime;
-
             }
-
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

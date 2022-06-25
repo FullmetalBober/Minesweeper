@@ -36,6 +36,8 @@ namespace main
         private void Form2_Closing(Object sender, FormClosingEventArgs e)
         {
             Form main = Application.OpenForms[0];
+            if (Settings.konami == true)
+                main.BackgroundImage = Image.FromFile("space.jpg");
             main.Show();
         }
 
@@ -72,7 +74,8 @@ namespace main
             addButtons();
             this.Location = new Point((Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2,
                                       (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2);
-
+            if(Settings.konami == true)
+                BackgroundImage = Image.FromFile("space.jpg");
             textBox2.Text = Settings.mapMin.ToString();
 
 
@@ -140,7 +143,8 @@ namespace main
             else if (e.KeyCode == Keys.A && Settings.easterEgg == 9)
             {
                 Settings.easterEgg = 10;
-                MessageBox.Show("TEST");
+                BackgroundImage = Image.FromFile("space.jpg");
+                Settings.konami = true;
                 e.SuppressKeyPress = true;
             }
             else
@@ -800,6 +804,7 @@ namespace main
         private void timer1_Tick(object sender, EventArgs e)
         {
             Settings.gameTime++;
+            if(Game.first == false)
             textBox1.Text = Settings.gameTime.ToString();
         }
 
