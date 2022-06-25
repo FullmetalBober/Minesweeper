@@ -172,26 +172,65 @@
   <data name="groupBox1.Text" xml:space="preserve">
     <value>Level</value>
   </data>
-  <data name="textBox4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>96, 12</value>
+  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>35, 16</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 15</value>
+    <value>71, 15</value>
   </data>
   <data name="label7.Text" xml:space="preserve">
-    <value>Nickname:</value>
+    <value>Nickname</value>
   </data>
   <data name="button2.Text" xml:space="preserve">
     <value>Rating</value>
   </data>
+  <data name="languages.Location" type="System.Drawing.Point, System.Drawing">
+    <value>354, 34</value>
+  </data>
   <data name="languages.Size" type="System.Drawing.Size, System.Drawing">
     <value>130, 23</value>
+  </data>
+  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>353, 16</value>
   </data>
   <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
     <value>131, 15</value>
   </data>
   <data name="label8.Text" xml:space="preserve">
     <value>Choose a language</value>
+  </data>
+  <data name="radioButton5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 20</value>
+  </data>
+  <data name="radioButton5.Text" xml:space="preserve">
+    <value>Soundtrack 1</value>
+  </data>
+  <data name="radioButton6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 20</value>
+  </data>
+  <data name="radioButton6.Text" xml:space="preserve">
+    <value>Soundtrack 2</value>
+  </data>
+  <data name="radioButton7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 20</value>
+  </data>
+  <data name="radioButton7.Text" xml:space="preserve">
+    <value>Random</value>
+  </data>
+  <data name="radioButton8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 20</value>
+  </data>
+  <data name="radioButton8.Text" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 15</value>
+  </data>
+  <data name="label9.Text" xml:space="preserve">
+    <value>Volum:</value>
+  </data>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>Music</value>
   </data>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

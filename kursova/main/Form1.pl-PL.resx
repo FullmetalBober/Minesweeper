@@ -120,6 +120,9 @@
   <data name="button1.Text" xml:space="preserve">
     <value>Zaczynać</value>
   </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>Poziom</value>
+  </data>
   <data name="label3.Text" xml:space="preserve">
     <value>Min:</value>
   </data>
@@ -163,17 +166,14 @@
   <data name="radioButton1.Text" xml:space="preserve">
     <value>Łatwo</value>
   </data>
-  <data name="groupBox1.Text" xml:space="preserve">
-    <value>Poziom</value>
-  </data>
   <data name="textBox4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>60, 12</value>
+    <value>12, 37</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 15</value>
+    <value>35, 15</value>
   </data>
   <data name="label7.Text" xml:space="preserve">
-    <value>Imię:</value>
+    <value>Imię</value>
   </data>
   <data name="button2.Text" xml:space="preserve">
     <value>Ocena</value>
@@ -183,6 +183,39 @@
   </data>
   <data name="label8.Text" xml:space="preserve">
     <value>Wybierz język</value>
+  </data>
+  <data name="radioButton5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 20</value>
+  </data>
+  <data name="radioButton5.Text" xml:space="preserve">
+    <value> Ścieżka 1</value>
+  </data>
+  <data name="radioButton6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 20</value>
+  </data>
+  <data name="radioButton6.Text" xml:space="preserve">
+    <value> Ścieżka 2</value>
+  </data>
+  <data name="radioButton7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 20</value>
+  </data>
+  <data name="radioButton7.Text" xml:space="preserve">
+    <value>Losowy</value>
+  </data>
+  <data name="radioButton8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 20</value>
+  </data>
+  <data name="radioButton8.Text" xml:space="preserve">
+    <value>Nic</value>
+  </data>
+  <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 15</value>
+  </data>
+  <data name="label9.Text" xml:space="preserve">
+    <value>Głośność:</value>
+  </data>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>Dźwięk</value>
   </data>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

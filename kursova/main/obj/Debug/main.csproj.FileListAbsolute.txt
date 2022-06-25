@@ -38,3 +38,5 @@ C:\Users\manki\Desktop\курсова 2022\kursova\main\bin\Debug\main.exe.manif
 C:\Users\manki\Desktop\курсова 2022\kursova\main\bin\Debug\main.application
 C:\Users\manki\Desktop\курсова 2022\kursova\main\obj\Debug\main.exe.manifest
 C:\Users\manki\Desktop\курсова 2022\kursova\main\obj\Debug\main.application
+C:\Users\manki\Desktop\курсова 2022\kursova\main\obj\Debug\Interop.WMPLib.dll
+C:\Users\manki\Desktop\курсова 2022\kursova\main\obj\Debug\main.csproj.ResolveComReference.cache

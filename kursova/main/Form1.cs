@@ -8,11 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Globalization;
+using WMPLib;
+
 
 namespace main
 {
     public partial class Form1 : Form
     {
+
         public Form1()
         {
             System.Threading.Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo(Properties.Settings.Default.Language);
@@ -35,15 +38,18 @@ namespace main
         {
 
         }
-
+        Music music = new Music();
         private void Form1_Load(object sender, EventArgs e)
         {
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             MinimizeBox = false;
+            textBox1.MaxLength = 10;
+            textBox2.MaxLength = 10;
+            textBox3.MaxLength = 10;
             textBox4.MaxLength = 15;
+            textBox5.MaxLength = 3;
         }
-
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -163,30 +169,30 @@ namespace main
 
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
         {
-            textBox1.ReadOnly = false;
-            textBox2.ReadOnly = false;
-            textBox3.ReadOnly = false;
+            //textBox1.ReadOnly = false;
+            //textBox2.ReadOnly = false;
+            //textBox3.ReadOnly = false;
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            textBox1.ReadOnly = true;
-            textBox2.ReadOnly = true;
-            textBox3.ReadOnly = true;
+            //textBox1.ReadOnly = true;
+            //textBox2.ReadOnly = true;
+            //textBox3.ReadOnly = true;
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            textBox1.ReadOnly = true;
-            textBox2.ReadOnly = true;
-            textBox3.ReadOnly = true;
+            //textBox1.ReadOnly = true;
+            //textBox2.ReadOnly = true;
+            //textBox3.ReadOnly = true;
         }
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
-            textBox1.ReadOnly = true;
-            textBox2.ReadOnly = true;
-            textBox3.ReadOnly = true;
+            //textBox1.ReadOnly = true;
+            //textBox2.ReadOnly = true;
+            //textBox3.ReadOnly = true;
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -236,6 +242,35 @@ namespace main
                 Application.Restart();
                 languages.Text = "Polski";
             }
+        }
+
+        private void radioButton8_CheckedChanged(object sender, EventArgs e)
+        {
+            music.sound = 0;
+            music.stop();
+        }
+
+        private void radioButton5_CheckedChanged(object sender, EventArgs e)
+        {
+            music.sound = 1;
+            music.play_music_1();
+        }
+
+        private void radioButton6_CheckedChanged(object sender, EventArgs e)
+        {
+            music.sound = 2;
+            music.play_music_2();
+        }
+
+        private void radioButton7_CheckedChanged(object sender, EventArgs e)
+        {
+            music.sound = 3;
+            music.Random();
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }
