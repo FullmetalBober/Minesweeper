@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Globalization;
 using WMPLib;
+using System.IO;
 
 namespace main
 {
@@ -47,6 +48,7 @@ namespace main
             textBox3.MaxLength = 10;
             textBox4.MaxLength = 15;
             textBox5.MaxLength = 3;
+            nickname(true);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -59,6 +61,7 @@ namespace main
 
             if (radioButton1.Checked)
             {
+                nickname(false);
                 Settings.gameLevel = 1;
                 Settings.mapHeight = 9;
                 Settings.mapWidth = 9;
@@ -70,6 +73,7 @@ namespace main
 
             if (radioButton2.Checked)
             {
+                nickname(false);
                 Settings.gameLevel = 2;
                 Settings.mapHeight = 14;
                 Settings.mapWidth = 14;
@@ -81,6 +85,7 @@ namespace main
 
             if (radioButton3.Checked)
             {
+                nickname(false);
                 Settings.gameLevel = 3;
                 Settings.mapHeight = 15;
                 Settings.mapWidth = 23;
@@ -156,6 +161,7 @@ namespace main
 
                 if (mh > 0 && mw > 0 && mm > 0)
                 {
+                    nickname(false);
                     this.Hide();
                     Form2 game = new Form2();
                     game.Show();
@@ -164,6 +170,24 @@ namespace main
             Settings.mapFlag = Settings.mapMin;
 
         }
+        private async Task nickname(bool k)
+        {
+            if (Settings.gameName != "-" && k == false)
+            {
+                File.Create("nickname.txt").Close();
+                StreamWriter read = new StreamWriter("nickname.txt", true);
+                read.WriteLineAsync(Settings.gameName);
+                read.Close();
+            }
+            if (k == true)
+            {
+                StreamReader write = File.OpenText("nickname.txt");
+                textBox4.Text = await write.ReadLineAsync();
+                write.Close();
+            }
+        }
+
+
 
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
         {

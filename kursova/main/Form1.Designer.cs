@@ -114,7 +114,6 @@
             // 
             resources.ApplyResources(this.textBox3, "textBox3");
             this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
             // 
             // label3
             // 
@@ -127,7 +126,6 @@
             // 
             resources.ApplyResources(this.textBox2, "textBox2");
             this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
             // 
             // label2
             // 
@@ -140,7 +138,6 @@
             // 
             resources.ApplyResources(this.textBox1, "textBox1");
             this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
             // 
             // label1
             // 

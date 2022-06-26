@@ -47,6 +47,7 @@
             this.textBox4.ForeColor = System.Drawing.Color.White;
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
+            this.textBox4.TabStop = false;
             // 
             // textBox5
             // 
@@ -55,6 +56,7 @@
             this.textBox5.ForeColor = System.Drawing.Color.White;
             this.textBox5.Name = "textBox5";
             this.textBox5.ReadOnly = true;
+            this.textBox5.TabStop = false;
             // 
             // textBox6
             // 
@@ -63,6 +65,7 @@
             this.textBox6.ForeColor = System.Drawing.Color.White;
             this.textBox6.Name = "textBox6";
             this.textBox6.ReadOnly = true;
+            this.textBox6.TabStop = false;
             // 
             // richTextBox1
             // 
@@ -71,6 +74,7 @@
             this.richTextBox1.ForeColor = System.Drawing.Color.White;
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
+            this.richTextBox1.TabStop = false;
             this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // richTextBox2
@@ -80,6 +84,7 @@
             this.richTextBox2.ForeColor = System.Drawing.Color.White;
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.ReadOnly = true;
+            this.richTextBox2.TabStop = false;
             // 
             // richTextBox3
             // 
@@ -88,6 +93,7 @@
             this.richTextBox3.ForeColor = System.Drawing.Color.White;
             this.richTextBox3.Name = "richTextBox3";
             this.richTextBox3.ReadOnly = true;
+            this.richTextBox3.TabStop = false;
             // 
             // button1
             // 

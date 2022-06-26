@@ -78,6 +78,7 @@ namespace main
             WMP.close();
         }
     }
+
     static class Settings
     {
         public static int mapHeight { get; set; }

@@ -22,6 +22,7 @@ namespace main
             public static int empty { get; set; }
 
             public static int size { get; set; }
+            public static bool pauza { get; set; }
         }
 
 
@@ -56,12 +57,15 @@ namespace main
             }
             if (Settings.mapWidth < 1)
                 button1.Visible = false;
+            if (Settings.mapWidth < 3)
+                button2.Visible = false;
             if (Settings.mapWidth < 8)
             {
                 pictureBox1.Visible = false;
                 pictureBox2.Visible = false;
             }
             button1.Image = Image.FromFile("dobre.png");
+            button2.Image = Image.FromFile("stop.jpg");
             Settings.gameTime = 0;
             Settings.gameWin = 0;
             FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -74,95 +78,16 @@ namespace main
             addButtons();
             this.Location = new Point((Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2,
                                       (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2);
-            if(Settings.konami == true)
+            if (Settings.konami == true)
                 BackgroundImage = Image.FromFile("space.jpg");
             textBox2.Text = Settings.mapMin.ToString();
-
-
         }
-
-        void Form_KeyDown(object sender, KeyEventArgs e)
-        {
-
-            if (e.KeyCode == Keys.Up && Settings.easterEgg == 1)
-            {
-                Settings.easterEgg = 2;
-                e.SuppressKeyPress = true;
-            }
-
-
-            else if (e.KeyCode == Keys.Up)
-            {
-                Settings.easterEgg = 1;
-                e.SuppressKeyPress = true;
-            }
-
-
-            else if (e.KeyCode == Keys.Down && Settings.easterEgg == 2)
-            {
-                Settings.easterEgg = 3;
-                e.SuppressKeyPress = true;
-            }
-
-            else if (e.KeyCode == Keys.Down && Settings.easterEgg == 3)
-            {
-                Settings.easterEgg = 4;
-                e.SuppressKeyPress = true;
-            }
-
-            else if (e.KeyCode == Keys.Left && Settings.easterEgg == 4)
-            {
-                Settings.easterEgg = 5;
-                e.SuppressKeyPress = true;
-            }
-
-            else if (e.KeyCode == Keys.Right && Settings.easterEgg == 5)
-            {
-                Settings.easterEgg = 6;
-                e.SuppressKeyPress = true;
-            }
-
-            else if (e.KeyCode == Keys.Left && Settings.easterEgg == 6)
-            {
-                Settings.easterEgg = 7;
-                e.SuppressKeyPress = true;
-            }
-
-            else if (e.KeyCode == Keys.Right && Settings.easterEgg == 7)
-            {
-                Settings.easterEgg = 8;
-                e.SuppressKeyPress = true;
-            }
-
-            else if (e.KeyCode == Keys.B && Settings.easterEgg == 8)
-            {
-                Settings.easterEgg = 9;
-                e.SuppressKeyPress = true;
-            }
-
-            else if (e.KeyCode == Keys.A && Settings.easterEgg == 9)
-            {
-                Settings.easterEgg = 10;
-                BackgroundImage = Image.FromFile("space.jpg");
-                Settings.konami = true;
-                e.SuppressKeyPress = true;
-            }
-            else
-            {
-                Settings.easterEgg = 0;
-                e.SuppressKeyPress = true;
-            }
-        }
-
 
         public Image imgFind(int xPos, int yPos)
         {
             Bitmap png_out = new Bitmap(Game.size, Game.size);
-
             Graphics gr = Graphics.FromImage(png_out);
-
             gr.DrawImage(Image.FromFile("saper.png"), new Rectangle(new Point(0, 0), new Size(Game.size, Game.size)), (xPos - 1) * 100 - 7, (yPos - 1) * 100 - 7, 116, 116, GraphicsUnit.Pixel);
-
             return png_out;
         }
 
@@ -234,9 +159,9 @@ namespace main
         {
             this.Width = Settings.mapWidth * Game.size + Game.empty * 3 + Game.empty / 2;
             this.Height = Settings.mapHeight * Game.size + Game.empty * 2 + 86;
+            pictureBox3.Width = this.Width;
+            pictureBox3.Height = this.Height - 86;
         }
-
-
 
         private void addButtons()
         {
@@ -285,7 +210,6 @@ namespace main
                             Settings.mapFlag--;
                             k++;
                             break;
-
                         case 1:
                             map[i, j] = -1;
                             buttons[i, j].Image = imgFind(4, 3);
@@ -399,13 +323,9 @@ namespace main
                         Settings.mapFlag++;
                         break;
                 }
-
-
             }
             textBox2.Text = Settings.mapFlag.ToString();
         }
-
-
 
         private void stepStart(int i, int j)
         {
@@ -413,9 +333,7 @@ namespace main
             Queue coordXY = new Queue();
             coordXY.Enqueue(i);
             coordXY.Enqueue(j);
-
             map[i, j] = 11;
-
             while (coordXY.Count > 0)
             {
                 t++;
@@ -426,11 +344,9 @@ namespace main
                 if (t % 2 == 0)
                 {
                     j = (int)coordXY.Dequeue();
-
                     if (map[i, j] == 11)
                     {
                         visibility(i, j);
-
                         if (i - 1 >= 0 && (map[i - 1, j] == 0 || map[i - 1, j] == -11))
                         {
                             if (map[i - 1, j] == -11)
@@ -441,7 +357,6 @@ namespace main
                             coordXY.Enqueue(j);
                             map[i - 1, j] = 11;
                         }
-
                         if (i + 1 < Settings.mapHeight && (map[i + 1, j] == 0 || map[i + 1, j] == -11))
                         {
                             if (map[i + 1, j] == -11)
@@ -538,7 +453,6 @@ namespace main
 
                         if (i - 1 >= 0 && j - 1 >= 0 && map[i - 1, j - 1] != 0 && map[i - 1, j - 1] != 11)
                             visibility(i - 1, j - 1);
-
                     }
                 }
             }
@@ -553,7 +467,6 @@ namespace main
                 }
             }
         }
-
 
 
         private void pressedLeft(Button pressedButton)
@@ -803,8 +716,8 @@ namespace main
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            Settings.gameTime++;
-            if(Game.first == false)
+            if (Game.first == false && Game.pauza == false)
+                Settings.gameTime++;
             textBox1.Text = Settings.gameTime.ToString();
         }
 
@@ -820,6 +733,101 @@ namespace main
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (Game.pauza == false)
+            {
+                Game.pauza = true;
+                pictureBox3.Visible = true;
+            }
+            else
+            {
+                Game.pauza = false;
+                pictureBox3.Visible = false;
+            }
+        }
+        void Form_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.KeyCode == Keys.Up && Settings.easterEgg == 1)
+            {
+                Settings.easterEgg = 2;
+                e.SuppressKeyPress = true;
+            }
+
+
+            else if (e.KeyCode == Keys.Up)
+            {
+                Settings.easterEgg = 1;
+                e.SuppressKeyPress = true;
+            }
+
+
+            else if (e.KeyCode == Keys.Down && Settings.easterEgg == 2)
+            {
+                Settings.easterEgg = 3;
+                e.SuppressKeyPress = true;
+            }
+
+            else if (e.KeyCode == Keys.Down && Settings.easterEgg == 3)
+            {
+                Settings.easterEgg = 4;
+                e.SuppressKeyPress = true;
+            }
+
+            else if (e.KeyCode == Keys.Left && Settings.easterEgg == 4)
+            {
+                Settings.easterEgg = 5;
+                e.SuppressKeyPress = true;
+            }
+
+            else if (e.KeyCode == Keys.Right && Settings.easterEgg == 5)
+            {
+                Settings.easterEgg = 6;
+                e.SuppressKeyPress = true;
+            }
+
+            else if (e.KeyCode == Keys.Left && Settings.easterEgg == 6)
+            {
+                Settings.easterEgg = 7;
+                e.SuppressKeyPress = true;
+            }
+
+            else if (e.KeyCode == Keys.Right && Settings.easterEgg == 7)
+            {
+                Settings.easterEgg = 8;
+                e.SuppressKeyPress = true;
+            }
+
+            else if (e.KeyCode == Keys.B && Settings.easterEgg == 8)
+            {
+                Settings.easterEgg = 9;
+                e.SuppressKeyPress = true;
+            }
+
+            else if (e.KeyCode == Keys.A && Settings.easterEgg == 9)
+            {
+                if (Settings.konami == true)
+                {
+                    Settings.easterEgg = 10;
+                    BackgroundImage = Image.FromFile("background.jpg");
+                    Settings.konami = false;
+                }
+                else
+                {
+                    Settings.easterEgg = 10;
+                    BackgroundImage = Image.FromFile("space.jpg");
+                    Settings.konami = true;
+                    e.SuppressKeyPress = true;
+                }
+            }
+            else
+            {
+                Settings.easterEgg = 0;
+                e.SuppressKeyPress = true;
+            }
         }
     }
 }
