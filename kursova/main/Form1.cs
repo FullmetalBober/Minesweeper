@@ -175,15 +175,15 @@ namespace main
             if (Settings.gameName != "-" && k == false)
             {
                 File.Create("nickname.txt").Close();
-                StreamWriter read = new StreamWriter("nickname.txt", true);
-                read.WriteLineAsync(Settings.gameName);
-                read.Close();
+                StreamWriter write = new StreamWriter("nickname.txt", true);
+                write.WriteLineAsync(Settings.gameName);
+                write.Close();
             }
             if (k == true)
             {
-                StreamReader write = File.OpenText("nickname.txt");
-                textBox4.Text = await write.ReadLineAsync();
-                write.Close();
+                StreamReader read = File.OpenText("nickname.txt");
+                textBox4.Text = await read.ReadLineAsync();
+                read.Close();
             }
         }
 
