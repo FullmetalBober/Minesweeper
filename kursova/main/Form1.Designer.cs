@@ -49,13 +49,13 @@
             this.button2 = new System.Windows.Forms.Button();
             this.languages = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.radioButton8 = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.button_stop = new System.Windows.Forms.Button();
+            this.button_music_1 = new System.Windows.Forms.Button();
+            this.button_music_2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -220,53 +220,15 @@
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Name = "label8";
             // 
-            // radioButton5
-            // 
-            resources.ApplyResources(this.radioButton5, "radioButton5");
-            this.radioButton5.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton5.ForeColor = System.Drawing.Color.White;
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.UseVisualStyleBackColor = false;
-            this.radioButton5.CheckedChanged += new System.EventHandler(this.radioButton5_CheckedChanged);
-            // 
-            // radioButton6
-            // 
-            resources.ApplyResources(this.radioButton6, "radioButton6");
-            this.radioButton6.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton6.ForeColor = System.Drawing.Color.White;
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.UseVisualStyleBackColor = false;
-            this.radioButton6.CheckedChanged += new System.EventHandler(this.radioButton6_CheckedChanged);
-            // 
-            // radioButton7
-            // 
-            resources.ApplyResources(this.radioButton7, "radioButton7");
-            this.radioButton7.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton7.ForeColor = System.Drawing.Color.White;
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.UseVisualStyleBackColor = false;
-            this.radioButton7.CheckedChanged += new System.EventHandler(this.radioButton7_CheckedChanged);
-            // 
-            // radioButton8
-            // 
-            resources.ApplyResources(this.radioButton8, "radioButton8");
-            this.radioButton8.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton8.Checked = true;
-            this.radioButton8.ForeColor = System.Drawing.Color.White;
-            this.radioButton8.Name = "radioButton8";
-            this.radioButton8.TabStop = true;
-            this.radioButton8.UseVisualStyleBackColor = false;
-            this.radioButton8.CheckedChanged += new System.EventHandler(this.radioButton8_CheckedChanged);
-            // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(this.button3);
+            this.groupBox2.Controls.Add(this.button_music_2);
+            this.groupBox2.Controls.Add(this.button_music_1);
+            this.groupBox2.Controls.Add(this.button_stop);
             this.groupBox2.Controls.Add(this.textBox5);
             this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.radioButton5);
-            this.groupBox2.Controls.Add(this.radioButton8);
-            this.groupBox2.Controls.Add(this.radioButton6);
-            this.groupBox2.Controls.Add(this.radioButton7);
             resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.ForeColor = System.Drawing.Color.White;
             this.groupBox2.Name = "groupBox2";
@@ -283,6 +245,34 @@
             resources.ApplyResources(this.label9, "label9");
             this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Name = "label9";
+            // 
+            // button_stop
+            // 
+            resources.ApplyResources(this.button_stop, "button_stop");
+            this.button_stop.Name = "button_stop";
+            this.button_stop.UseVisualStyleBackColor = true;
+            this.button_stop.Click += new System.EventHandler(this.button_stop_Click);
+            // 
+            // button_music_1
+            // 
+            resources.ApplyResources(this.button_music_1, "button_music_1");
+            this.button_music_1.Name = "button_music_1";
+            this.button_music_1.UseVisualStyleBackColor = true;
+            this.button_music_1.Click += new System.EventHandler(this.button_music_1_Click);
+            // 
+            // button_music_2
+            // 
+            resources.ApplyResources(this.button_music_2, "button_music_2");
+            this.button_music_2.Name = "button_music_2";
+            this.button_music_2.UseVisualStyleBackColor = true;
+            this.button_music_2.Click += new System.EventHandler(this.button_music_2_Click);
+            // 
+            // button3
+            // 
+            resources.ApplyResources(this.button3, "button3");
+            this.button3.Name = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Form1
             // 
@@ -330,13 +320,13 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox languages;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton6;
-        private System.Windows.Forms.RadioButton radioButton7;
-        private System.Windows.Forms.RadioButton radioButton8;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button button_music_2;
+        private System.Windows.Forms.Button button_music_1;
+        private System.Windows.Forms.Button button_stop;
+        private System.Windows.Forms.Button button3;
     }
 }
 

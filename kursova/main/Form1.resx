@@ -150,6 +150,189 @@
   <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
+  </data>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
+  </data>
+  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;textBox3.Name" xml:space="preserve">
+    <value>textBox3</value>
+  </data>
+  <data name="&gt;&gt;textBox3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox3.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;textBox3.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;textBox2.Name" xml:space="preserve">
+    <value>textBox2</value>
+  </data>
+  <data name="&gt;&gt;textBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox2.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;textBox2.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Name" xml:space="preserve">
+    <value>textBox1</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;radioButton4.Name" xml:space="preserve">
+    <value>radioButton4</value>
+  </data>
+  <data name="&gt;&gt;radioButton4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButton4.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;radioButton4.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;radioButton3.Name" xml:space="preserve">
+    <value>radioButton3</value>
+  </data>
+  <data name="&gt;&gt;radioButton3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButton3.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;radioButton3.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;radioButton2.Name" xml:space="preserve">
+    <value>radioButton2</value>
+  </data>
+  <data name="&gt;&gt;radioButton2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButton2.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;radioButton2.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;radioButton1.Name" xml:space="preserve">
+    <value>radioButton1</value>
+  </data>
+  <data name="&gt;&gt;radioButton1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButton1.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;radioButton1.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="groupBox1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
+  </data>
+  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 63</value>
+  </data>
+  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>348, 186</value>
+  </data>
+  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>Рівень</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
   <data name="label6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -531,33 +714,6 @@
   <data name="&gt;&gt;radioButton1.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
-  <data name="groupBox1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
-  </data>
-  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 63</value>
-  </data>
-  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>348, 186</value>
-  </data>
-  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="groupBox1.Text" xml:space="preserve">
-    <value>Рівень</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
   <data name="textBox4.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
@@ -711,136 +867,267 @@
   <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="radioButton5.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="button3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
   </data>
-  <data name="radioButton5.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
+  <data name="button3.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        5AAAAABJRU5ErkJggg==
+</value>
   </data>
-  <data name="radioButton5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="button3.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="button3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="radioButton5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 47</value>
+  <data name="button3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>67, 21</value>
   </data>
-  <data name="radioButton5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 20</value>
+  <data name="button3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 45</value>
   </data>
-  <data name="radioButton5.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
+  <data name="button3.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
   </data>
-  <data name="radioButton5.Text" xml:space="preserve">
-    <value>Трек 1</value>
+  <data name="&gt;&gt;button3.Name" xml:space="preserve">
+    <value>button3</value>
   </data>
-  <data name="&gt;&gt;radioButton5.Name" xml:space="preserve">
-    <value>radioButton5</value>
+  <data name="&gt;&gt;button3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;radioButton5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;radioButton5.Parent" xml:space="preserve">
+  <data name="&gt;&gt;button3.Parent" xml:space="preserve">
     <value>groupBox2</value>
   </data>
-  <data name="&gt;&gt;radioButton5.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;button3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="button_music_2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="button_music_2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
+  <data name="button_music_2.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="button_music_2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_music_2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>67, 75</value>
+  </data>
+  <data name="button_music_2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 45</value>
+  </data>
+  <data name="button_music_2.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;button_music_2.Name" xml:space="preserve">
+    <value>button_music_2</value>
+  </data>
+  <data name="&gt;&gt;button_music_2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button_music_2.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;button_music_2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="button_music_1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="button_music_1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAIAAAAlC+aJAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wgAADsIBFShKgAAAB4pJREFUaEPtmflPFFkQx0cEBCFgWEUQNHgEY0A8QDyiYrwRRSWACB4cCuqKF2pE
+        FJV430IUf/COaCJ4gaKggIoHhxGP/YP2k3m1OD07ujP0m12y8fPDZLrrdb2qmdevvtVt+Ql9+vSRb7/4
+        xX8BK9B55Jp/ASbzsNK3b19vb++goKChQ4eOHj06JiZmwoQJkydPTkhISExMTElJycjIWLNmTV5eXn5+
+        /saNG3+3snnzZj43bdrEGc7n5uauXbs2MzMzLS1t6dKl8+fPnzJlyrhx46Kjo0eMGBESEhIQEODl5aVm
+        BGdTtY3S398/PDw8KiqK+GbNmrVixYotW7aUlZVVVFTcvn37/v37T58+bWpqevv2bUdHx+fPn/8wx5cv
+        X9rb29+8edPY2FhbW3vv3r1bt24x15EjR4qLiwsKCkh1+PDhEqgdgYGBY8aMiYuLW7x48YYNGw4ePHjx
+        4sU7d+7U1dW1tLQQ37dv32Se/5RVq1ZJxHasXr363bt3/AYysLeSlZUlEdtRWloqQ3o3P0ygvLxchvRu
+        uOklYjuqqqpkiFZaW1tramo6Ozvl2DQ/TKC+vl6G6INthA0R52yvHz9+lLPm+GECHz58kCGaYCtkW1PO
+        2ZRv3rwpBnM4TsDT01PvLtnW1jZ79mzxbuXEiRNiM4fjm5iaKnYdUNEot/zq4t3K5cuXxWwOx3UgIiJC
+        7Kbhn7xw4YKvr6+4tkJRr66ulhHmoF6JU1sQM2I3DeIiNDRUuVVKhi/9+vV79uyZjDAH8kk5NzBt2jSx
+        m4OlP3PmTOUTTYU+Gzx4MN/5Q5BMMsgcOTk5yr8BZhK7CZAh6M3upY/qOnz4cFhYGN8HDBjw+vVrGWcO
+        NKzyb2D58uViNwG3qZ+fn3Lo4+ODbj137tywYcM4DA4ORmjJOHOsW7dOTWGAvUnsPeXFixcjR44UdxbL
+        nDlzzp8/j56NjIzkcMiQIehkGWqO9evXqykMkJbYewRVdsGCBeLLGi4KHh3f0NBAI8EZlpOuSozUV7MY
+        YO2K3XW+fv26Z8+e7qVPTaTbQhqyb1IQYmNjOUlJ/vTpk1xgDro5NZGBnTt3it110Aj0fuLIYpk6dSpL
+        /+rVq0RMbvHx8ZxkmzbfryloStVEBkpKSsTuIi9fvqQnFi8Wy6BBgw4dOnTp0iWaTKwkQJvLeRo9Xa0S
+        e4OaywANpNhdgT6T/VdcWMttdnY2i6e7ZlGVqTCYUKMko06aZNu2bWo6A9xzYncalgRrnaDFhcXCajlz
+        5gwSujtWEpgxYwYmbnFdYnH79u1qOgMnT54Uu3OwHvbt2+ft7S3XWxcPf+P169dtb1aCnjt3Ltbk5GRd
+        CRQVFakZDfDLid0Jurq6uGf69+8vF1s1DxtxZWXl+/fvZZAVgk5KSmJAamqqrgR27dqlJjWAfhS7E5w6
+        dYqI5Uqr5qFs4YFaJiP+gqCp8YxBA+tKYPfu3WpeAxQdsf8TxJGWliaXWYmKiqJZofH9+23K4PT0dMYg
+        YHQlQM1R8xqg5ovdCcrKyrqf8k2cOPHKlStIaIfbPEGr/qOgoEBXAsXFxWpqAyxfsTsBtymFb9KkSQTX
+        3Nz888jYqfBPg6Yrgb1796qYDfSg32MjciYmVXcKCws1xa8vASdR9xxpyLFpHCfg0hJyCXoa/G/dulWO
+        TeM4AdSL2HXD9op/t/8DLu1CLoFWZctCrrt3F3K+DrhKXV0dHQIiXlcCjuuAS5XYJVpaWmiU8/LydCXg
+        uBLTv4pdN21tbei8zMxMXQlQgiRoW86ePSt23VD16HiWLVumK4EdO3ZI0La4pEZdAoFET0PfoysBxw3N
+        6dOnxa4b4k5JSaGx1NWROW4pUchidwNMGR0draupR1ZJ0LboenjvENo9jc+FELYStC3Hjx8XuxuoqqoK
+        DQ3V9QbI8aPFY8eOid0N0KkFBwdTEOTYHNnZ2RK0LUePHhW7G2hvb2cJ0fTIsTkcv+DowWMV56FziI2N
+        vXv3rhybIyMjQ4K2BdErdjfATpqcnKxL8Np15IJbEwDU6IEDB+TAHOoxhz09e7ToPKWlpeweWorxkiVL
+        JGhb6BLE7h7YJPjrtSSQmJgoQdti5vG6M5SXl2dlZWlJYN68eRK0LYWFhWJ3D11dXXZPHXtM91tQA9Rn
+        sfd64uLiJGhbcnJyxN67QRGiCyVoW8y/pQSWOBN0dnYie1pbW1+9etXU1NTY2Pj8+fP6+vonT57QHz9+
+        /Pjhw4cPHjzg89GjR7W1tZynSDOGkYznKq5lvXV0dKiXVOLdCidtXwh9JzU1VYY4glKKlqQ5xHVzc3ND
+        QwOzVldXX7t2jfKEki0pKeEuQqXgJykpaeHChQkJCfHx8TExMcyHjggPDw8JCaG3/M1KUFCQ+jJw4EBk
+        UlhYWERERGRk5NixY1kh06dP507FCX3cypUr8/Pzi4qK2OjpuioqKtSLZ3sWLVrED8AvUVNTc+PGjcrK
+        SjTw/v37aX9yc3PT09NVWLgeP378qFGjiIYgAgMDAwIC/P39fXx8PD09u5/46sXDw8PLy8vX15eJmM72
+        ndB3+DH4ARC9Kizw8/Nza1i/+B9gsfwJcrhHxdV1XkYAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="button_music_1.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="button_music_1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_music_1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 75</value>
+  </data>
+  <data name="button_music_1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 45</value>
+  </data>
+  <data name="button_music_1.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;button_music_1.Name" xml:space="preserve">
+    <value>button_music_1</value>
+  </data>
+  <data name="&gt;&gt;button_music_1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button_music_1.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;button_music_1.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="radioButton6.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="button_stop.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
   </data>
-  <data name="radioButton6.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
+  <data name="button_stop.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        /9j/4AAQSkZJRgABAQEAWwBbAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwg
+        JC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIy
+        MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAkACQDASIAAhEBAxEB/8QA
+        HwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIh
+        MUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVW
+        V1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXG
+        x8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQF
+        BgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAV
+        YnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOE
+        hYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq
+        8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDx7xZ4s1Pxfrc+o6jcO4Zz5UO47Il7Ko7cVgUV7J4D+DFh4u8D
+        prtxq1zbzyGQLHHGpUbSQM55PSgDxulBKkEEgjoRXo/ws+Gtp4/uNUS8v57VLIJjyUBLFi3r/u/rXL+N
+        PD0fhXxhqOiRTtPHayBVkcYLAqDyPxoA7bwp8cNc8PaHHptwgv8AymPlyzMSwTjC5745orymigAr6y+C
+        hH/Cn7TkcNcZ/wC+2r5PIKkgjBHBFWoNU1C1t2t7e/uYYWzmOOZlU568A4oA90/ZuI+1+Juf+eP83rzf
+        4wHPxW17H/PVP/Ra1yFpf3lg7PZ3U9uzDDGGQoSPfFRSyyTytLNI0kjnLO7Ekn1JNAEdFSJDJIMojMOm
+        QKKAPUvjl4U0vw74ojuNNjeL7cpmljyNisTztGOM9a8poooAKkiUPKinoTg0UUAfYngXwL4f0fwjZQw2
+        EcxmQTySXCh3ZmAzzjpwBj2ooooA/9k=
+</value>
   </data>
-  <data name="radioButton6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="button_stop.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="button_stop.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="radioButton6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 73</value>
+  <data name="button_stop.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 21</value>
   </data>
-  <data name="radioButton6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 20</value>
+  <data name="button_stop.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 45</value>
   </data>
-  <data name="radioButton6.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
+  <data name="button_stop.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
   </data>
-  <data name="radioButton6.Text" xml:space="preserve">
-    <value>Трек 2</value>
+  <data name="&gt;&gt;button_stop.Name" xml:space="preserve">
+    <value>button_stop</value>
   </data>
-  <data name="&gt;&gt;radioButton6.Name" xml:space="preserve">
-    <value>radioButton6</value>
+  <data name="&gt;&gt;button_stop.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;radioButton6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;radioButton6.Parent" xml:space="preserve">
+  <data name="&gt;&gt;button_stop.Parent" xml:space="preserve">
     <value>groupBox2</value>
   </data>
-  <data name="&gt;&gt;radioButton6.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="radioButton7.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="radioButton7.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
-  </data>
-  <data name="radioButton7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="radioButton7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 99</value>
-  </data>
-  <data name="radioButton7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>81, 20</value>
-  </data>
-  <data name="radioButton7.TabIndex" type="System.Int32, mscorlib">
-    <value>22</value>
-  </data>
-  <data name="radioButton7.Text" xml:space="preserve">
-    <value>Рандом</value>
-  </data>
-  <data name="&gt;&gt;radioButton7.Name" xml:space="preserve">
-    <value>radioButton7</value>
-  </data>
-  <data name="&gt;&gt;radioButton7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;radioButton7.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;radioButton7.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="radioButton8.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="radioButton8.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
-  </data>
-  <data name="radioButton8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="radioButton8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 21</value>
-  </data>
-  <data name="radioButton8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>90, 20</value>
-  </data>
-  <data name="radioButton8.TabIndex" type="System.Int32, mscorlib">
-    <value>23</value>
-  </data>
-  <data name="radioButton8.Text" xml:space="preserve">
-    <value>Відсутня</value>
-  </data>
-  <data name="&gt;&gt;radioButton8.Name" xml:space="preserve">
-    <value>radioButton8</value>
-  </data>
-  <data name="&gt;&gt;radioButton8.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;radioButton8.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;radioButton8.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;button_stop.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
   <data name="textBox5.Font" type="System.Drawing.Font, System.Drawing">
@@ -874,7 +1161,7 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;textBox5.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>4</value>
   </data>
   <data name="label9.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -907,7 +1194,7 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>5</value>
   </data>
   <data name="groupBox2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>

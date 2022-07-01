@@ -46,7 +46,7 @@ namespace main
             textBox1.MaxLength = 10;
             textBox2.MaxLength = 10;
             textBox3.MaxLength = 10;
-            textBox4.MaxLength = 15;
+            textBox4.MaxLength = 14;
             textBox5.MaxLength = 3;
             nickname(true);
         }
@@ -191,30 +191,22 @@ namespace main
 
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
         {
-            //textBox1.ReadOnly = false;
-            //textBox2.ReadOnly = false;
-            //textBox3.ReadOnly = false;
+
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            //textBox1.ReadOnly = true;
-            //textBox2.ReadOnly = true;
-            //textBox3.ReadOnly = true;
+ 
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            //textBox1.ReadOnly = true;
-            //textBox2.ReadOnly = true;
-            //textBox3.ReadOnly = true;
+
         }
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
-            //textBox1.ReadOnly = true;
-            //textBox2.ReadOnly = true;
-            //textBox3.ReadOnly = true;
+
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -266,13 +258,42 @@ namespace main
             }
         }
 
-        private void radioButton8_CheckedChanged(object sender, EventArgs e)
+
+
+
+
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void button_stop_Click(object sender, EventArgs e)
         {
             music.sound = 0;
             music.stop();
         }
 
-        private void radioButton5_CheckedChanged(object sender, EventArgs e)
+        private void button_music_1_Click(object sender, EventArgs e)
+        {
+            volum();
+            music.sound = 1;
+            music.play_music_1();
+        }
+
+        private void button_music_2_Click(object sender, EventArgs e)
+        {
+            volum();
+            music.sound = 2;
+            music.play_music_2();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            volum();
+            music.sound = 3;
+            music.Random();
+        }
+        void volum()
         {
             int k;
             if (int.TryParse(textBox5.Text, out k))
@@ -293,24 +314,6 @@ namespace main
             {
                 textBox5.Text = null;
             }
-            music.sound = 1;
-            music.play_music_1();
-        }
-
-        private void radioButton6_CheckedChanged(object sender, EventArgs e)
-        {
-            music.sound = 2;
-            music.play_music_2();
-        }
-
-        private void radioButton7_CheckedChanged(object sender, EventArgs e)
-        {
-            music.sound = 3;
-            music.Random();
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
         }
     }
 }
