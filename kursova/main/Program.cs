@@ -21,7 +21,7 @@ namespace main
                 {
                     tmr.Interval = 10;
                     tmr.Stop();
-                    WMP.URL = @"1.mp3";
+                    WMP.URL = @"files\\1.mp3";
                     WMP.settings.volume = volum;
                     WMP.controls.play();
                     tmr.Tick += new EventHandler(tmr_Tick);
@@ -38,7 +38,7 @@ namespace main
                 {
                     tmr.Interval = 10;
                     tmr.Stop();
-                    WMP.URL = @"2.mp3";
+                    WMP.URL = @"files\\2.mp3";
                     WMP.settings.volume = volum;
                     WMP.controls.play();
                     tmr.Tick += new EventHandler(tmr_Tick);
@@ -106,8 +106,6 @@ namespace main
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
-
         }
-
     }
 }

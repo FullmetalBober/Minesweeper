@@ -14,6 +14,8 @@ namespace main
 {
     public partial class Form2 : Form
     {
+        public int[,] map = new int[Settings.mapHeight, Settings.mapWidth];
+        public Button[,] buttons = new Button[Settings.mapHeight, Settings.mapWidth];
         static class Game
         {
             public static bool first { get; set; }
@@ -25,21 +27,9 @@ namespace main
             public static bool pauza { get; set; }
         }
 
-
-        public int[,] map = new int[Settings.mapHeight, Settings.mapWidth];
-
-        public Button[,] buttons = new Button[Settings.mapHeight, Settings.mapWidth];
         public Form2()
         {
             InitializeComponent();
-        }
-
-        private void Form2_Closing(Object sender, FormClosingEventArgs e)
-        {
-            Form main = Application.OpenForms[0];
-            if (Settings.konami == true)
-                main.BackgroundImage = Image.FromFile("space.jpg");
-            main.Show();
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -64,8 +54,8 @@ namespace main
                 pictureBox1.Visible = false;
                 pictureBox2.Visible = false;
             }
-            button1.Image = Image.FromFile("dobre.png");
-            button2.Image = Image.FromFile("stop.jpg");
+            button1.Image = Image.FromFile("files\\dobre.png");
+            button2.Image = Image.FromFile("files\\stop.jpg");
             Settings.gameTime = 0;
             Settings.gameWin = 0;
             FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -79,15 +69,23 @@ namespace main
             this.Location = new Point((Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2,
                                       (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2);
             if (Settings.konami == true)
-                BackgroundImage = Image.FromFile("space.jpg");
+                BackgroundImage = Image.FromFile("files\\space.jpg");
             textBox2.Text = Settings.mapMin.ToString();
+        }
+
+        private void Form2_Closing(Object sender, FormClosingEventArgs e)
+        {
+            Form main = Application.OpenForms[0];
+            if (Settings.konami == true)
+                main.BackgroundImage = Image.FromFile("files\\space.jpg");
+            main.Show();
         }
 
         public Image imgFind(int xPos, int yPos)
         {
             Bitmap png_out = new Bitmap(Game.size, Game.size);
             Graphics gr = Graphics.FromImage(png_out);
-            gr.DrawImage(Image.FromFile("saper.png"), new Rectangle(new Point(0, 0), new Size(Game.size, Game.size)), (xPos - 1) * 100 - 7, (yPos - 1) * 100 - 7, 116, 116, GraphicsUnit.Pixel);
+            gr.DrawImage(Image.FromFile("files\\saper.png"), new Rectangle(new Point(0, 0), new Size(Game.size, Game.size)), (xPos - 1) * 100 - 7, (yPos - 1) * 100 - 7, 116, 116, GraphicsUnit.Pixel);
             return png_out;
         }
 
@@ -120,7 +118,6 @@ namespace main
                 {
                     map[0, 0] = 10;
                     k++;
-
                 }
             }
             map[first_i, first_j] = 0;
@@ -468,7 +465,6 @@ namespace main
             }
         }
 
-
         private void pressedLeft(Button pressedButton)
         {
             int i = pressedButton.Location.Y / Game.size;
@@ -512,7 +508,6 @@ namespace main
                     Settings.gameWin++;
                     map[i, j] = 99;
                 }
-
                 if (map[i, j] == 3)
                 {
                     buttons[i, j].Enabled = false;
@@ -520,7 +515,6 @@ namespace main
                     Settings.gameWin++;
                     map[i, j] = 99;
                 }
-
                 if (map[i, j] == 4)
                 {
                     buttons[i, j].Enabled = false;
@@ -528,7 +522,6 @@ namespace main
                     Settings.gameWin++;
                     map[i, j] = 99;
                 }
-
                 if (map[i, j] == 5)
                 {
                     buttons[i, j].Enabled = false;
@@ -644,7 +637,7 @@ namespace main
                 switch (game)
                 {
                     case 0:
-                        button1.Image = Image.FromFile("zle.png");
+                        button1.Image = Image.FromFile("files\\zle.png");
                         if (Properties.Settings.Default.Language == "en-US")
                             MessageBox.Show("Defeat -_-");
                         else if (Properties.Settings.Default.Language == "pl-PL")
@@ -692,21 +685,21 @@ namespace main
         {
             if (Settings.gameLevel == 1)
             {
-                StreamWriter writer = new StreamWriter("easy.txt", true);
+                StreamWriter writer = new StreamWriter("files\\easy.txt", true);
                 writer.WriteLineAsync(Settings.gameName.ToString());
                 writer.WriteLineAsync(Settings.gameTime.ToString());
                 writer.Close();
             }
             if (Settings.gameLevel == 2)
             {
-                StreamWriter writer = new StreamWriter("medium.txt", true);
+                StreamWriter writer = new StreamWriter("files\\medium.txt", true);
                 writer.WriteLineAsync(Settings.gameName.ToString());
                 writer.WriteLineAsync(Settings.gameTime.ToString());
                 writer.Close();
             }
             if (Settings.gameLevel == 3)
             {
-                StreamWriter writer = new StreamWriter("hard.txt", true);
+                StreamWriter writer = new StreamWriter("files\\hard.txt", true);
                 writer.WriteLineAsync(Settings.gameName.ToString());
                 writer.WriteLineAsync(Settings.gameTime.ToString());
                 writer.Close();
@@ -750,75 +743,63 @@ namespace main
         }
         void Form_KeyDown(object sender, KeyEventArgs e)
         {
-
             if (e.KeyCode == Keys.Up && Settings.easterEgg == 1)
             {
                 Settings.easterEgg = 2;
                 e.SuppressKeyPress = true;
             }
-
-
             else if (e.KeyCode == Keys.Up)
             {
                 Settings.easterEgg = 1;
                 e.SuppressKeyPress = true;
             }
-
-
             else if (e.KeyCode == Keys.Down && Settings.easterEgg == 2)
             {
                 Settings.easterEgg = 3;
                 e.SuppressKeyPress = true;
             }
-
             else if (e.KeyCode == Keys.Down && Settings.easterEgg == 3)
             {
                 Settings.easterEgg = 4;
                 e.SuppressKeyPress = true;
             }
-
             else if (e.KeyCode == Keys.Left && Settings.easterEgg == 4)
             {
                 Settings.easterEgg = 5;
                 e.SuppressKeyPress = true;
             }
-
             else if (e.KeyCode == Keys.Right && Settings.easterEgg == 5)
             {
                 Settings.easterEgg = 6;
                 e.SuppressKeyPress = true;
             }
-
             else if (e.KeyCode == Keys.Left && Settings.easterEgg == 6)
             {
                 Settings.easterEgg = 7;
                 e.SuppressKeyPress = true;
             }
-
             else if (e.KeyCode == Keys.Right && Settings.easterEgg == 7)
             {
                 Settings.easterEgg = 8;
                 e.SuppressKeyPress = true;
             }
-
             else if (e.KeyCode == Keys.B && Settings.easterEgg == 8)
             {
                 Settings.easterEgg = 9;
                 e.SuppressKeyPress = true;
             }
-
             else if (e.KeyCode == Keys.A && Settings.easterEgg == 9)
             {
                 if (Settings.konami == true)
                 {
                     Settings.easterEgg = 10;
-                    BackgroundImage = Image.FromFile("background.jpg");
+                    BackgroundImage = Image.FromFile("files\\background.jpg");
                     Settings.konami = false;
                 }
                 else
                 {
                     Settings.easterEgg = 10;
-                    BackgroundImage = Image.FromFile("space.jpg");
+                    BackgroundImage = Image.FromFile("files\\space.jpg");
                     Settings.konami = true;
                     e.SuppressKeyPress = true;
                 }

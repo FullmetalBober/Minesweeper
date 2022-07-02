@@ -15,29 +15,13 @@ namespace main
 {
     public partial class Form1 : Form
     {
-
+        Music music = new Music();
         public Form1()
         {
             System.Threading.Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo(Properties.Settings.Default.Language);
             System.Threading.Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo(Properties.Settings.Default.Language);
             InitializeComponent();
         }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-        Music music = new Music();
         private void Form1_Load(object sender, EventArgs e)
         {
             FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -53,8 +37,6 @@ namespace main
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-
             Settings.gameName = textBox4.Text;
             if (Settings.gameName.Length == 0)
                 Settings.gameName = "-";
@@ -174,49 +156,17 @@ namespace main
         {
             if (Settings.gameName != "-" && k == false)
             {
-                File.Create("nickname.txt").Close();
-                StreamWriter write = new StreamWriter("nickname.txt", true);
+                File.Create("files\\nickname.txt").Close();
+                StreamWriter write = new StreamWriter("files\\nickname.txt", true);
                 write.WriteLineAsync(Settings.gameName);
                 write.Close();
             }
             if (k == true)
             {
-                StreamReader read = File.OpenText("nickname.txt");
+                StreamReader read = File.OpenText("files\\nickname.txt");
                 textBox4.Text = await read.ReadLineAsync();
                 read.Close();
             }
-        }
-
-
-
-        private void radioButton4_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
- 
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton3_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -257,11 +207,6 @@ namespace main
                 languages.Text = "Polski";
             }
         }
-
-
-
-
-
 
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
@@ -315,5 +260,14 @@ namespace main
                 textBox5.Text = null;
             }
         }
+        private void radioButton4_CheckedChanged(object sender, EventArgs e) { }
+        private void radioButton1_CheckedChanged(object sender, EventArgs e) { }
+        private void radioButton2_CheckedChanged(object sender, EventArgs e) { }
+        private void radioButton3_CheckedChanged(object sender, EventArgs e) { }
+        private void label6_Click(object sender, EventArgs e) { }
+        private void label5_Click(object sender, EventArgs e) { }
+        private void label2_Click(object sender, EventArgs e) { }
+        private void label1_Click(object sender, EventArgs e) { }
+        private void label3_Click(object sender, EventArgs e) { }
     }
 }

@@ -33,18 +33,11 @@ namespace main
             InitializeComponent();
         }
 
-        private void Form2_Closing(Object sender, FormClosingEventArgs e)
-        {
-            Form main = Application.OpenForms[0];
-            if (Settings.konami == true)
-                main.BackgroundImage = Image.FromFile("space.jpg");
-            main.Show();
-        }
         private void Form3_Load(object sender, EventArgs e)
         {
             if (Settings.konami == true)
             {
-                BackgroundImage = Image.FromFile("space.jpg");
+                BackgroundImage = Image.FromFile("files\\space.jpg");
                 richTextBox1.BackColor = Color.Black;
                 richTextBox2.BackColor = Color.Black;
                 richTextBox3.BackColor = Color.Black;
@@ -63,15 +56,21 @@ namespace main
             read_Hard();
         }
 
+        private void Form2_Closing(Object sender, FormClosingEventArgs e)
+        {
+            Form main = Application.OpenForms[0];
+            if (Settings.konami == true)
+                main.BackgroundImage = Image.FromFile("files\\space.jpg");
+            main.Show();
+        }
 
         private async Task read_Hard()
         {
             richTextBox3.Text = null;
             textBox6.Text = null;
             List<RecordHard> recordHard = new List<RecordHard>();
-
             string line;
-            StreamReader readerHard = File.OpenText("hard.txt");
+            StreamReader readerHard = File.OpenText("files\\hard.txt");
             for (int i = 0; (line = await readerHard.ReadLineAsync()) != null; i++)
             {
                 recordHard.Add(new RecordHard() { hardName = line, hardTime = int.Parse(await readerHard.ReadLineAsync()) });
@@ -93,7 +92,6 @@ namespace main
             {
                 richTextBox3.Text += "\n" + (i + 1) + "." + recordHard[i].hardName;
                 textBox6.Text += "\t" + recordHard[i].hardTime;
-
             }
         }
 
@@ -102,11 +100,9 @@ namespace main
         {
             richTextBox2.Text = null;
             textBox5.Text = null;
-
             List<RecordMedium> recordMedium = new List<RecordMedium>();
-
             string line;
-            StreamReader readerMedium = File.OpenText("medium.txt");
+            StreamReader readerMedium = File.OpenText("files\\medium.txt");
             for (int i = 0; (line = await readerMedium.ReadLineAsync()) != null; i++)
             {
                 recordMedium.Add(new RecordMedium() { mediumName = line, mediumTime = int.Parse(await readerMedium.ReadLineAsync()) });
@@ -128,18 +124,15 @@ namespace main
             {
                 richTextBox2.Text += "\n" + (i + 1) + "." + recordMedium[i].mediumName;
                 textBox5.Text += "\t" + recordMedium[i].mediumTime;
-
             }
         }
         private async Task read_Easy()
         {
             richTextBox1.Text = null;
             textBox4.Text = null;
-
             List<RecordEasy> recordEasy = new List<RecordEasy>();
-
             string line;
-            StreamReader readerEasy = File.OpenText("easy.txt");
+            StreamReader readerEasy = File.OpenText("files\\easy.txt");
             for (int i = 0; (line = await readerEasy.ReadLineAsync()) != null; i++)
             {
                 recordEasy.Add(new RecordEasy() { easyName = line, easyTime = int.Parse(await readerEasy.ReadLineAsync()) });
@@ -162,11 +155,6 @@ namespace main
                 richTextBox1.Text += "\n" + (i + 1) + "." + recordEasy[i].easyName;
                 textBox4.Text += "\t" + recordEasy[i].easyTime;
             }
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -195,10 +183,7 @@ namespace main
                 read_Hard();
             }
         }
-
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        private void richTextBox1_TextChanged(object sender, EventArgs e) { }
+        private void textBox1_TextChanged(object sender, EventArgs e) { }
     }
 }
