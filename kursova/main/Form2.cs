@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Collections;
 using System.IO;
 
+
 namespace main
 {
     public partial class Form2 : Form
@@ -681,30 +682,89 @@ namespace main
             }
         }
 
-        private void recordWrite()
+
+
+
+
+        private async Task recordWrite()
         {
+            int check = 0;
             if (Settings.gameLevel == 1)
             {
-                StreamWriter writer = new StreamWriter("files\\easy.txt", true);
-                writer.WriteLineAsync(Settings.gameName.ToString());
-                writer.WriteLineAsync(Settings.gameTime.ToString());
-                writer.Close();
+                string[] readText = File.ReadAllLines("files\\easy.txt");
+                for (int i = 0; i < System.IO.File.ReadAllLines("files\\easy.txt").Length; i++)
+                {
+                    if (readText[i] == Settings.gameName)
+                    {
+                        check = 1;
+                    }
+                    if(int.Parse(readText[i + 1]) > Settings.gameTime && check == 1)
+                    {
+                        readText[i + 1] = Settings.gameTime.ToString();
+                        File.WriteAllLines("files\\easy.txt", readText);
+                        check = 2;
+                        break;
+                    }
+                }
+
+                if (check == 0)
+                {
+                    StreamWriter writer = new StreamWriter("files\\easy.txt", true);
+                    writer.WriteLineAsync(Settings.gameName.ToString());
+                    writer.WriteLineAsync(Settings.gameTime.ToString());
+                    writer.Close();
+                }
             }
             if (Settings.gameLevel == 2)
             {
-                StreamWriter writer = new StreamWriter("files\\medium.txt", true);
-                writer.WriteLineAsync(Settings.gameName.ToString());
-                writer.WriteLineAsync(Settings.gameTime.ToString());
-                writer.Close();
+                string[] readText = File.ReadAllLines("files\\medium.txt");
+                for (int i = 0; i < System.IO.File.ReadAllLines("files\\medium.txt").Length; i++)
+                {
+                    if (readText[i] == Settings.gameName)
+                    {
+                        check = 1;
+                    }
+                    if (int.Parse(readText[i + 1]) > Settings.gameTime && check == 1)
+                    {
+                        readText[i + 1] = Settings.gameTime.ToString();
+                        File.WriteAllLines("files\\medium.txt", readText);
+                        check = 2;
+                        break;
+                    }
+                }
+                if (check == 0)
+                {
+                    StreamWriter writer = new StreamWriter("files\\medium.txt", true);
+                    writer.WriteLineAsync(Settings.gameName.ToString());
+                    writer.WriteLineAsync(Settings.gameTime.ToString());
+                    writer.Close();
+                }
             }
             if (Settings.gameLevel == 3)
             {
-                StreamWriter writer = new StreamWriter("files\\hard.txt", true);
-                writer.WriteLineAsync(Settings.gameName.ToString());
-                writer.WriteLineAsync(Settings.gameTime.ToString());
-                writer.Close();
+                string[] readText = File.ReadAllLines("files\\hard.txt");
+                for (int i = 0; i < System.IO.File.ReadAllLines("files\\hard.txt").Length; i++)
+                {
+                    if (readText[i] == Settings.gameName)
+                    {
+                        check = 1;
+                    }
+                    if (int.Parse(readText[i + 1]) > Settings.gameTime && check == 1)
+                    {
+                        readText[i + 1] = Settings.gameTime.ToString();
+                        File.WriteAllLines("files\\hard.txt", readText);
+                        check = 2;
+                        break;
+                    }
+                }
+                if (check == 0)
+                {
+                    StreamWriter writer = new StreamWriter("files\\hard.txt", true);
+                    writer.WriteLineAsync(Settings.gameName.ToString());
+                    writer.WriteLineAsync(Settings.gameTime.ToString());
+                    writer.Close();
+                }
             }
-
         }
 
         private void timer1_Tick(object sender, EventArgs e)
