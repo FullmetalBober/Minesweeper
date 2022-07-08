@@ -35,6 +35,7 @@ namespace main
 
         private void Form3_Load(object sender, EventArgs e)
         {
+            DoubleBuffered = true;
             if (Settings.konami == true)
             {
                 BackgroundImage = Image.FromFile("files\\space.jpg");
@@ -46,7 +47,7 @@ namespace main
                 textBox6.BackColor = Color.Black;
             }
             Settings.recordCount = 0;
-            this.FormClosing += Form2_Closing;
+            this.FormClosing += Form3_Closing;
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             MinimizeBox = false;
@@ -56,7 +57,7 @@ namespace main
             read_Hard();
         }
 
-        private void Form2_Closing(Object sender, FormClosingEventArgs e)
+        private void Form3_Closing(Object sender, FormClosingEventArgs e)
         {
             Form main = Application.OpenForms[0];
             if (Settings.konami == true)
@@ -168,11 +169,6 @@ namespace main
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             if (14 * (Settings.recordList + 1) < Settings.recordCount + 1)
@@ -182,6 +178,10 @@ namespace main
                 read_Medium();
                 read_Hard();
             }
+        }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
         private void richTextBox1_TextChanged(object sender, EventArgs e) { }
         private void textBox1_TextChanged(object sender, EventArgs e) { }

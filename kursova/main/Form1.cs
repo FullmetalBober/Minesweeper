@@ -27,6 +27,7 @@ namespace main
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             MinimizeBox = false;
+            this.FormClosing += Form1_Closing;
             textBox1.MaxLength = 10;
             textBox2.MaxLength = 10;
             textBox3.MaxLength = 10;
@@ -259,6 +260,13 @@ namespace main
             {
                 textBox5.Text = null;
             }
+        }
+        private void Form1_Closing(Object sender, FormClosingEventArgs e)
+        {
+            Settings.gameName = textBox4.Text;
+            if (Settings.gameName.Length == 0)
+                Settings.gameName = "-";
+            nickname(false);
         }
         private void radioButton4_CheckedChanged(object sender, EventArgs e) { }
         private void radioButton1_CheckedChanged(object sender, EventArgs e) { }

@@ -21,9 +21,7 @@ namespace main
         {
             public static bool first { get; set; }
             public static bool stop { get; set; }
-
             public static int empty { get; set; }
-
             public static int size { get; set; }
             public static bool pauza { get; set; }
         }
@@ -66,9 +64,9 @@ namespace main
 
             Game.first = true;
             sizeGame();
-            addButtons();
             this.Location = new Point((Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2,
-                                      (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2);
+                          (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2);
+            addButtons();
             if (Settings.konami == true)
                 BackgroundImage = Image.FromFile("files\\space.jpg");
             textBox2.Text = Settings.mapMin.ToString();
@@ -89,8 +87,6 @@ namespace main
             gr.DrawImage(Image.FromFile("files\\saper.png"), new Rectangle(new Point(0, 0), new Size(Game.size, Game.size)), (xPos - 1) * 100 - 7, (yPos - 1) * 100 - 7, 116, 116, GraphicsUnit.Pixel);
             return png_out;
         }
-
-
 
         private void mapGenerate(int first_i, int first_j)
         {
@@ -682,10 +678,6 @@ namespace main
             }
         }
 
-
-
-
-
         private async Task recordWrite()
         {
             int check = 0;
@@ -698,7 +690,7 @@ namespace main
                     {
                         check = 1;
                     }
-                    if(int.Parse(readText[i + 1]) > Settings.gameTime && check == 1)
+                    if (check == 1 && int.Parse(readText[i + 1]) > Settings.gameTime)
                     {
                         readText[i + 1] = Settings.gameTime.ToString();
                         File.WriteAllLines("files\\easy.txt", readText);
@@ -706,7 +698,6 @@ namespace main
                         break;
                     }
                 }
-
                 if (check == 0)
                 {
                     StreamWriter writer = new StreamWriter("files\\easy.txt", true);
